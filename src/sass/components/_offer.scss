@@ -1,0 +1,192 @@
+// .offer-container {
+//   @extend .container;
+//   display: grid;
+//   grid-template-columns: repeat(12, 1fr);
+//   grid-template-rows: repeat(10, 70px);
+//   // max-width: $galery-max-width;
+//   grid-gap: $offer-grid-gap;
+//   background-color: $offer-background-color;
+//   @include breakpoints(desktopXL) {
+//     grid-gap: 1 * $offer-grid-gap;
+//     grid-template-rows: repeat(10, 60px);
+//   }
+//     @include breakpoints(laptop) {
+//     width: $general-container-width !important;
+//     padding: 0 !important;
+//   }
+//   @include breakpoints(tablet) {
+//     display: block;
+//     margin-left: 50px;
+//     padding: 0 12%;
+//   }
+//   @media (max-width: $media-tablet - 200px){
+//     width: 100% !important;
+//   }
+// }
+
+// .offer-box {
+//   display: flex;
+//   min-height: $offer-box-min-height;
+//   @include breakpoints(tablet) {
+//     margin: 2% 12%;
+//   }
+//   @media (max-width: $media-mobile - 40px) {
+//     margin: 2% 5%;
+//   }
+//   &:nth-child(-n+6) {  //changes for the first seven elements
+//     background-color: $general-color;
+//     border: $general-color solid 2px;
+//   }
+//   &:first-child {
+//     //"strzyżenie"
+//     grid-column: 2 / span 5;
+//     grid-row: 1 / span 3;
+//     @media (max-width: 1125px) {
+//       grid-column: 1 / span 6; }
+
+//   }
+//   &:nth-child(2) {
+//     //"trymowanie"
+//     grid-column: 7 / span 5;
+//     grid-row: 2 / span 3;
+//     background-color: none;
+//     @media (max-width: 1125px) {
+//       grid-column: 7 / span 6; }
+//   }
+//   &:nth-child(3) {
+//     //"kąpiel"
+//     grid-column: 8 / span 5;
+//     grid-row: 5 / span 3;
+//      @media (max-width: 1125px) {
+//       grid-column: 7 / span 6;
+//     }
+//   }
+//   &:nth-child(4) {
+//     //"wyczesanie"
+//     grid-column: 7 / span 5;
+//     grid-row: 8 / span 3;
+//      @media (max-width: 1125px) {
+//       grid-column: 7 / span 6;
+//     }
+//   }
+//   &:nth-child(5) {
+//     //"oczy i uszy"
+//     grid-column: 2 / span 5;
+//     grid-row: 7 / span 3;
+//      @media (max-width: 1125px) {
+//       grid-column: 1 / span 6;
+//     }
+//   }
+//   &:nth-child(6) {
+//     //"pazurki"
+//     grid-column: 1 / span 5;
+//     grid-row: 4 / span 3;
+//      @media (max-width: 1125px) {
+//       grid-column: 1 / span 6;
+//     }
+//   }
+//   &:nth-child(7) {
+//     // "first paw"
+//     grid-column: 6 / span 2;
+//     grid-row: 5 / span 2;
+//      @media (max-width: 1125px) {
+//       grid-column: 9 / span 2;
+//       grid-row: 1 / span 1;
+//     }
+//     @include breakpoints(tablet) {
+//       // display: none;
+//     }
+//   }
+//   &:nth-child(8) {
+//     // "second paw"
+//     display: none;
+//      @media (max-width: 1125px) {
+//       display: block;
+//       grid-column: 3 / span 2;
+//       grid-row: 10 / span 1;
+//     }
+//     @include breakpoints(tablet) {
+//       display: none;
+//     }
+//   }
+//   &:nth-child(9) {
+//     //"grey paws"
+//     grid-column: 1;
+//     grid-row: 1 / span 3;
+//      @media (max-width: 1125px) {
+//       display: none;
+//     }
+//   }
+//   &:nth-child(10) {
+//     //"second grey paws"
+//     grid-column: 12;
+//     grid-row: 8 / span 3;
+//      @media (max-width: 1125px) {
+//       display: none;
+//     }
+//   }
+//   .offer-description {
+//     height: 100%;
+//     width: 50%;
+//     overflow: hidden;
+//   }
+//   h3 {
+//     padding-left: $general-font-size;
+//     padding-right: $general-font-size;
+//   }
+//   .offer-picture {
+//     height: 100%;
+//     width: 55%;
+//     @include breakpoints(desktopXL) {
+//       width: auto;
+//     }
+//     @include breakpoints(desktop) {
+//       height: 75%;
+//     }
+//      @media (max-width: 1125px) {
+//       height: 85%;
+//     }
+//   }
+//   .offer-addition-img1 {
+//     height: 40%;
+//     width: 40%;
+//     @include both-center;
+//     @include breakpoints(tablet) {
+//       position: static;
+//       transform: none;
+//       margin: 10% auto 0;
+//       height: 12%;
+//       width: 12%;
+//     }
+//   }
+//   .offer-addition-img2 {
+//     height: auto;
+//     width: 90%;
+//     margin: auto;
+//     opacity: 0.2;
+//   }
+//   p {
+//     padding: 0 15%;
+//     hyphens: auto;
+//     word-wrap: break-word;
+//     text-align: center;
+//   }
+//   &:hover {
+//     transform: scale(0.98);
+//   }
+
+// }
+// .slide-in {
+//   opacity: 0;
+//   transition: all 2s;
+// }
+// .slide-in-from-left {
+//   transform: translateX(-10%) scale(0.8);
+// }
+// .slide-in-from-right {
+//   transform: translateX(10%) scale(0.8);
+// }
+// .active {
+//   opacity: 1;
+//   transform: translateX(0%) scale(1);
+// }

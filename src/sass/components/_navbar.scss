@@ -1,0 +1,68 @@
+.custom-navbar {
+  margin-bottom: 0;
+  background-color: $navbar-background-color;
+  padding: 10px 0;
+
+  @media (min-width: 768px) {
+    background: 0 0;
+    &.top-nav-collapse {
+      background: $navbar-background-color;
+      padding: 15px 0;
+    }
+  }
+}
+.navbar-brand {
+  //logo
+  color: $navbar-text-color;
+  font-weight: normal;
+  font-size: 25px;
+}
+
+.nav li {
+  &.active > a,
+  & a:hover,
+  & a:focus {
+    background-color: transparent;
+    color: $general-text-color;
+  }
+  & a:hover:after,
+  &.active > a:after {
+    background: $general-background-color;
+    color: $general-text-color;
+    width: 100%;
+  }
+  & a {
+    //links
+    font-size: 14px;
+    font-weight: normal;
+    color: $navbar-text-color;
+    letter-spacing: 0.5px;
+    transition: all ease-in-out 0.4s;
+    padding: 0;
+    margin: 15px 20px;
+    text-transform: uppercase;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 0px;
+      height: 2px;
+      margin: auto;
+      background: transparent;
+      transition: width 0.3s ease, background-color 0.3s ease;
+    }
+  }
+}
+
+.navbar-toggle {
+  border: none;
+  padding-top: 10px;
+  background-color: transparent;
+
+  & .icon-bar {
+    background: $general-background-color;
+    border-color: transparent;
+  }
+
+}

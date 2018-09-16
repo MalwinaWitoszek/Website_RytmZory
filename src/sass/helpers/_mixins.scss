@@ -1,0 +1,128 @@
+
+// MEDIA RULES - BREAKPOINTS
+
+@mixin breakpoints($point) {
+    @if $point == desktopXL {
+    @media (min-width: $media-desktopXL) { @content; }
+    }
+    @else if $point == desktop {
+    @media (max-width: $media-desktop) { @content; }
+    }
+    @else if $point == desktop-portrait {
+    @media (max-width: $media-desktop) and (orientation: portrait) { @content; }
+    }
+    @else if $point == laptop {
+    @media (max-width: $media-laptop) { @content; }
+    }
+    @else if $point == laptop-portrait {
+    @media (max-width: $media-laptop) and (orientation: portrait) { @content; }
+    }
+    @else if $point == tablet {
+    @media (max-width: $media-tablet) { @content; }
+    }
+    @else if $point == tablet-portrait {
+    @media (max-width: $media-tablet) and (orientation: portrait)  { @content; }
+    }
+    @else if $point == mobile {
+    @media (max-width: $media-mobile) { @content; }
+    }
+    @else if $point == mobile-portrait {
+    @media (max-width: $media-mobile) and (orientation: portrait)  { @content; }
+    }
+    @else if $point == mobile-small {
+    @media (max-width: $media-mobile-small) { @content; }
+    }
+    }
+    //example:
+    // .header {
+    // height: 100px;
+    // @include breakpoints(tablet) { height: 80px; }
+    // }
+
+
+//CENTERING SELECTED ELEMENT USING GRID
+@mixin center-one-element($element-selector){  //include to parent element
+    display: grid;
+    & > #{$element-selector}       // element to center - chosen child of parent
+    {
+        margin: auto;
+    }
+}
+//CENTERING MANY ELEMENTS USING GRID
+@mixin center-children(){  //include to parent element
+    display: grid;
+    & > *              // elements to center - all children of parent
+    {
+        margin: auto;
+    }
+}
+// CENTERING VERTICALLY RELATIVE TO THE PARENT
+@mixin v-center(){
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+// OPACITY ELEMENT WITHOUT INSIDE ELEMENTS
+
+@mixin opacity($opacity,$bg-color,$space-in-px){
+    display: inline-block;
+    position: relative;
+    &::before
+    {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background-color: $bg-color;
+      opacity: $opacity;
+    }
+}
+// example:
+// .border       class of the text to border with opacity
+// {
+//     @include opacity(.3,$headers-background-color,70px)
+// }
+
+// COMMENT
+
+@mixin comment($text) {
+/*------------------------
+    #{to-upper-case($text)}
+------------------------*/
+}
+
+// BOX SIZING
+
+@mixin box-sizing($type) {
+    -webkit-box-sizing: $type;
+    -moz-box-sizing: $type;
+    box-sizing: $type;
+}
+
+// *--------- CENTER vertically and horizontally ---------*
+@mixin both-center($top: -50%, $left: -50%, $position: relative) {
+    position: $position;
+    top: 50%;
+    left: 50%;
+
+    @include transform(translate($top, $left));
+}
+
+// *--------- TRANSFORM ---------*
+@mixin transform($transforms) {
+    transform: $transforms;
+    will-change: transform;
+}
+
+// *--------- SCALE ---------*
+@mixin scale($scale) {
+    @include transform(scale($scale));
+}
+
+

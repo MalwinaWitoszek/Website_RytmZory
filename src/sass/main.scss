@@ -1,0 +1,47 @@
+@charset "utf-8";
+// *--------- VARIABLES ---------*
+@import "helpers/variables";
+// *--------- MIXINS ---------*
+@import "helpers/mixins";
+// *--------- CSS RESET ---------*
+// @import "base/reset";
+// *--------- TYPOGRAPHY ---------*
+@import "base/typography";
+
+// ---------------------
+//     COMPONENTS
+// ---------------------
+// *--------- NAVBAR ---------*
+@import "components/navbar";
+// *--------- PRESENTATION ---------*
+@import "components/presentation";
+// *--------- OFFER ---------*
+@import "components/offer";
+// *--------- PRICES ---------*
+@import "components/prices";
+// *--------- SLIDESHOW ---------*
+@import "components/slideshow";
+// *--------- GALLERY ---------*
+@import "components/gallery";
+// *--------- CONTACT ---------*
+@import "components/contact";
+// *--------- GOOGLE MAP ---------*
+@import "components/gmap";
+
+
+// ---------------------
+//     LAYOUT
+// ---------------------
+// *--------- GENERAL ---------*
+@import "layout/general";
+// *---------  PARALLAX ---------*
+@import "layout/parallax";
+// ---------------------
+//     EXTENDS
+// ---------------------
+// *--------- EXTENDS ---------*
+// @import "base/extends";
+
+/*----------------------------*/
+
+

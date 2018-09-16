@@ -1,0 +1,140 @@
+//Typography
+$general-font-size: 16px;
+// $general-font-family: 'Lato', cursive;  // 400, 700
+$general-font-weight: 300;
+$general-font-weight-bold: 700;
+// $general-line-height: 1.8*$general-font-size;
+// $general-text-align: justify;
+// $heading-font-family: 'Lemonada', cursive;
+// $heading-h1-font-family: 'Lemon', cursive;
+// $heading-h1-font-size: 2.7*$general-font-size;
+// $heading-h2-font-size: 1.7*$general-font-size;
+$heading-h3-font-size: $general-font-size + 4px;
+// $heading-h1-line-height: 1.5*$general-line-height;
+// $headings-font-style: italic;
+// $headers-text-align: center;
+// $nav-font-family: 'Trade Winds', cursive;
+// $nav-font-size: 16px;
+// $nav-change-font-size: 14px;
+
+
+//Colors
+
+$general-background-color: white;
+$general-text-color: #fff;
+// $general-color: ;
+$navbar-background-color: #4dc47d;
+$navbar-text-color: #f9f9f9;
+// $header-text-color: ;
+// $gallery-background-color: white;
+// $offer-background-color: white;
+// $headers-background-color: ;
+// $nav-text-color: ;
+// $nav-text-color-active: lighten($nav-text-color, 25);
+// $back-to-top-button-background-color: lighten($general-color, 25);
+// $back-to-top-button-text-color: darken($general-color, 35);
+
+
+//dimensions
+// $general-container-width: 85%;
+// $section-top-bottom-padding: 6%;
+// $header-base-height: 11vh;
+// $header-change-height: 8%;
+// $header-logo-base-height: 70%;
+// $header-contact-phone-base-height: 25%;
+// $gallery-grid-gap : 25px;
+// $gallery-container-width: 75%;
+// $gallery-max-width: 1200px;
+// $offer-box-min-height : 100px;
+// $offer-grid-gap : 2em;
+// $contact-icon-dimension: 15%;
+// $mobile-menu-width: 65vw;
+
+
+//margin & padding
+// $header-contact-phone-bottom-margin: 12px;
+// $section-h2-top-margin: 70px;
+// $section-h2-bottom-margin: 50px;
+// $contact-top-banner-padding: 40px;
+// $presentation-paragrapf-margin: 7%;
+// $mobile-padding: 6vw;
+// $animate-delay-slideshow: 4s;
+
+// MEDIA RULES BREAKPOINTS (minimum-width):
+
+// $media-desktopXL: 1600px; //the highest resolution desktops
+// $media-desktop: 1281px;  //big desktops
+// $media-laptop: 1025px;  //laptops & little desktops
+// $media-tablet: 825px;  // tablets & Ipads
+// $media-mobile: 481px;  // low resolution tablets & mobiles landscape
+// $media-mobile-small: 320px;  // most of the mobiles portrait
+
+
+// //Typography
+// $general-font-size: 18px;
+// $general-font-family: 'Lato', cursive;  // 400, 700
+// $general-font-weight: 400;
+// $general-font-weight-bold: 700;
+// $general-line-height: 1.8*$general-font-size;
+// $general-text-align: justify;
+// $heading-font-family: 'Lemonada', cursive;
+// $heading-h1-font-family: 'Lemon', cursive;
+// $heading-h1-font-size: 2.7*$general-font-size;
+// $heading-h2-font-size: 1.7*$general-font-size;
+// $heading-h3-font-size: 1.3*$general-font-size;
+// $heading-h1-line-height: 1.5*$general-line-height;
+// $headings-font-style: italic;
+// $headers-text-align: center;
+// $nav-font-family: 'Trade Winds', cursive;
+// $nav-font-size: 16px;
+// $nav-change-font-size: 14px;
+
+
+// //Colors
+// $general-background-color: white;
+// $general-text-color: rgb(5, 65, 18);
+// $general-color: #26CBAF;
+// $header-background-color: white;
+// $header-text-color: #F70000;
+// $gallery-background-color: white;
+// $offer-background-color: white;
+// $headers-background-color: rgb(68, 65, 65);
+// $nav-text-color: #F70000;
+// $nav-text-color-active: lighten($nav-text-color, 25);
+// $back-to-top-button-background-color: lighten($general-color, 25);
+// $back-to-top-button-text-color: darken($general-color, 35);
+
+
+// //dimensions
+// $general-container-width: 85%;
+// $section-top-bottom-padding: 6%;
+// $header-base-height: 11vh;
+// $header-change-height: 8%;
+// $header-logo-base-height: 70%;
+// $header-contact-phone-base-height: 25%;
+// $gallery-grid-gap : 25px;
+// $gallery-container-width: 75%;
+// $gallery-max-width: 1200px;
+// $offer-box-min-height : 100px;
+// $offer-grid-gap : 2em;
+// $contact-icon-dimension: 15%;
+// $mobile-menu-width: 65vw;
+
+
+// //margin & padding
+// $header-contact-phone-bottom-margin: 12px;
+// $section-h2-top-margin: 70px;
+// $section-h2-bottom-margin: 50px;
+// $contact-top-banner-padding: 40px;
+// $presentation-paragrapf-margin: 7%;
+// $mobile-padding: 6vw;
+// $animate-delay-slideshow: 4s;
+
+// // MEDIA RULES BREAKPOINTS (minimum-width):
+
+// $media-desktopXL: 1600px; //the highest resolution desktops
+// $media-desktop: 1281px;  //big desktops
+// $media-laptop: 1025px;  //laptops & little desktops
+// $media-tablet: 825px;  // tablets & Ipads
+// $media-mobile: 481px;  // low resolution tablets & mobiles landscape
+// $media-mobile-small: 320px;  // most of the mobiles portrait

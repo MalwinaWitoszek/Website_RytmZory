@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700");
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 48px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 40px;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+h4 {
+  color: #505050;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+p {
+  color: #757575;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+}
+
+.custom-navbar {
+  margin-bottom: 0;
+  background-color: #4dc47d;
+  padding: 10px 0;
+}
+
+@media (min-width: 768px) {
+  .custom-navbar {
+    background: 0 0;
+  }
+  .custom-navbar.top-nav-collapse {
+    background: #4dc47d;
+    padding: 15px 0;
+  }
+}
+
+.navbar-brand {
+  color: #f9f9f9;
+  font-weight: normal;
+  font-size: 25px;
+}
+
+.nav li.active > a,
+.nav li a:hover,
+.nav li a:focus {
+  background-color: transparent;
+  color: #fff;
+}
+
+.nav li a:hover:after,
+.nav li.active > a:after {
+  background: white;
+  color: #fff;
+  width: 100%;
+}
+
+.nav li a {
+  font-size: 14px;
+  font-weight: normal;
+  color: #f9f9f9;
+  letter-spacing: 0.5px;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+  padding: 0;
+  margin: 15px 20px;
+  text-transform: uppercase;
+}
+
+.nav li a:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 2px;
+  margin: auto;
+  background: transparent;
+  -webkit-transition: width 0.3s ease, background-color 0.3s ease;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-toggle {
+  border: none;
+  padding-top: 10px;
+  background-color: transparent;
+}
+
+.navbar-toggle .icon-bar {
+  background: white;
+  border-color: transparent;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: white;
+  font-family: "Source Sans Pro", sans-serif;
+  overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: #252525;
+}
+
+a {
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+a:hover, a:active, a:focus {
+  color: #000000;
+  outline: none;
+}
+
+.section-title {
+  position: relative;
+  padding-bottom: 22px;
+}
+
+.parallax-section {
+  background-attachment: fixed !important;
+  background-size: cover !important;
+}
+
+#about,
+#project,
+#team,
+#contact,
+footer {
+  background: #ffffff;
+}
+
+#about,
+#team,
+#contact {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+/*----------------------------*/

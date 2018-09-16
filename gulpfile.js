@@ -9,7 +9,6 @@
 var gulp = require("gulp");
 var sass = require("gulp-sass");                    //kompilacja scss --> css i minifikacja csss
 // var	autoprefixer = require('autoprefixer');    // dodanie wendor prefiksów
-var postcss = require('gulp-postcss');
 var	autoprefixer = require('gulp-autoprefixer');    // dodanie wendor prefiksów
 var	watch = require('gulp-watch');                      // nasłuchiwanie zmian w plikach
 var plumber = require('gulp-plumber');              // zapobiega przerywaniu zadań - obsługa błędów
@@ -30,8 +29,10 @@ gulp.task('styles', function() {
     .pipe(sass.sync({  //   kompilacja SCSS → CSS
         outputStyle: "expanded"          // możliwości: nested, expanded, compact, compressed
     }))
-    .pipe(postcss([ autoprefixer({ grid: true }) ]))  // dodanie wendor prefiksów
-    // .pipe(autoprefixer({ grid: true }))	  // dodanie wendor prefiksów
+    .pipe(autoprefixer({   // dodanie wendor prefiksów
+        browsers: ['last 2 versions'],
+        grid: true
+    }))
     .pipe(gulp.dest('src/css'))
     .pipe(browserSync.stream())	// przeładowanie przeglądarki
 });
@@ -139,6 +140,7 @@ gulp.task("default", ["styles", "server-sync", "watch"]);   //wywołanie w termi
 //             css/main.css
 //             img/
 //             js/
+
 //                 scripts.js
 //                 jquery.js
 //                 Itd.
