@@ -6,7 +6,7 @@ body {
 
 body {
   background: $general-background-color;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: $general-font-family;
   overflow-x: hidden;
 }
 
@@ -23,7 +23,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   cursor: pointer;
-  background: #252525;
+  background: #641c1c;
 }
 
 a {

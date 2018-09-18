@@ -1,7 +1,7 @@
 // //fonts from Google Fonts
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700');
-
+@import url('https://fonts.googleapis.com/css?family=Barrio|Capriola|Eagle+Lake|Galindo|Glass+Antiqua|Kavivanar|Mirza:400,600,700|Oregano|Racing+Sans+One|Tenor+Sans&subset=latin-ext');
 
 h1,h2,h3,h4,h5,h6 {
    font-weight: $general-font-weight;
@@ -11,6 +11,8 @@ h1,h2,h3,h4,h5,h6 {
    font-size: 2*$heading-h3-font-size;
    font-weight: $general-font-weight - 100;
    line-height: 3*$general-font-size;
+   font-family: 'Tenor Sans', sans-serif;
+
  }
 
  h2 {
