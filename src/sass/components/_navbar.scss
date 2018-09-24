@@ -27,7 +27,7 @@
   }
   & a:hover:after,
   &.active > a:after {
-    background: $general-background-color;
+    // background: $general-background-color;
     color: $general-text-color;
     width: 100%;
   }
@@ -61,7 +61,7 @@
   background-color: transparent;
 
   & .icon-bar {
-    background: $general-background-color;
+    // background: $general-background-color;
     border-color: transparent;
   }
 

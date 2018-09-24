@@ -29,12 +29,13 @@ $heading-h3-font-size: $general-font-size + 4px;
 
 //Colors
 
-$general-background-color: white;
-$general-text-color: #fff;
+$darker-background-color: #26292E;
+$lighter-background-color: lighten($darker-background-color, 10%);
+$general-text-color: #ddd;
 // $general-color: ;
-$navbar-background-color: #641c1c;
+$navbar-background-color: #7c1919;
 $navbar-text-color: #f9f9f9;
-// $header-text-color: ;
+$header-text-color:#fff;
 // $gallery-background-color: white;
 // $offer-background-color: white;
 // $headers-background-color: ;
@@ -46,6 +47,7 @@ $navbar-text-color: #f9f9f9;
 
 //dimensions
 // $general-container-width: 85%;
+$svg-polygon-height: 180px;
 // $section-top-bottom-padding: 6%;
 // $header-base-height: 11vh;
 // $header-change-height: 8%;

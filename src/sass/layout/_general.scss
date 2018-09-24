@@ -5,9 +5,10 @@ body {
 }
 
 body {
-  background: $general-background-color;
+  // background: $general-background-color;
   font-family: $general-font-family;
   overflow-x: hidden;
+  color: $general-text-color;
 }
 
 *,
@@ -19,11 +20,12 @@ body {
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
+  background: white;
 }
 
 ::-webkit-scrollbar-thumb {
   cursor: pointer;
-  background: #641c1c;
+  background: lighten($navbar-background-color, 20%);
 }
 
 a {
@@ -36,39 +38,54 @@ a {
     outline: none;
   }
 }
-
-
-
+.lighter-backgrund {
+  background-color: $lighter-background-color;
+}
+.darker-background {
+  background-color: $darker-background-color;
+}
 
 // SPRAWDZIC CZY WYSTEPUJE
 //buttons i preloader w stylach tooplate-style.css
-
-
-.section-title {
+section{
   position: relative;
-  padding-bottom: 22px;
 }
+.section-title {
+  padding-top: 22px;
+}
+.negative-top-margin{
+  margin-top: .5*$svg-polygon-height;
+}
+svg {
 
-.parallax-section {
-  background-attachment: fixed !important;
-  background-size: cover !important;
-}
+  width: 100vw;
+  height: $svg-polygon-height;
+  fill: $darker-background-color;
+  // fill: $lighter-background-color;
+ }
+ svg:first-of-type {
+    fill: $navbar-background-color;
+   }
+// .parallax-section {
+//   background-attachment: fixed !important;
+//   background-size: cover !important;
+// }
 
-#about,
-#project,
-#team,
-#contact,
-footer {
-  background: #ffffff;
-}
+// #about,
+// #project,
+// #team,
+// #contact,
+// footer {
+//   background: #ffffff;
+// }
 
-#about,
-#team,
-#contact {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  text-align: center;
-}
+// #about,
+// #team,
+// #contact {
+//   padding-top: 100px;
+//   padding-bottom: 100px;
+//   text-align: center;
+// }
 
 //body
 // {

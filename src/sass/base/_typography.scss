@@ -5,6 +5,8 @@
 
 h1,h2,h3,h4,h5,h6 {
    font-weight: $general-font-weight;
+   color: $header-text-color;
+
  }
 
  h1 {
@@ -28,13 +30,13 @@ h1,h2,h3,h4,h5,h6 {
  }
 
  h4 {
-   color: #505050;
+  //  color: #505050;
    font-size: $general-font-size + 2px;
    line-height: 1.75*$general-font-size;
  }
 
  p {
-   color: #757575;
+  //  color: #757575;
    font-size: $general-font-size;
    font-weight: $general-font-weight;
    line-height: 1.75*$general-font-size;

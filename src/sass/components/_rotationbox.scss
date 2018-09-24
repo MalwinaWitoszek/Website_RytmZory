@@ -1,0 +1,212 @@
+// .wrapper {
+// 	margin: 0 auto 100px auto;
+// 	max-width: 960px;
+// }
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.stage {
+	list-style: none;
+	padding: 0;
+}
+
+/*************************************
+Build the group and rotate on hover
+**************************************/
+
+.group {
+	width: 260px;
+	height: 400px;
+	// float: left;
+
+	perspective: 1000px;
+}
+
+
+.group-view {
+	width: 260px;
+	height: 400px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: translateZ(-130px);
+	-moz-transform: translateZ(-130px);
+	transform: translateZ(-130px);
+	-webkit-transition: -webkit-transform 350ms;
+	-moz-transition: -moz-transform 350ms;
+	transition: transform 350ms;
+}
+
+.group-view:hover {
+	-webkit-transform: rotateY(-78deg) translateZ(20px);
+	-moz-transform: rotateY(-78deg) translateZ(20px);
+	transform: rotateY(-75deg) translateZ(20px);
+}
+
+/*************************************
+Transform and style the two planes
+**************************************/
+
+.group-view .group-poster,
+.group-view .group-info {
+	position: absolute;
+	width: 260px;
+	height: 400px;
+	background-color:$navbar-background-color;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.group-view .group-poster  {
+	-webkit-transform: translateZ(130px);
+	-moz-transform: translateZ(130px);
+	transform: translateZ(130px);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.group-view .group-info {
+	-webkit-transform: rotateY(90deg) translateZ(130px);
+	-moz-transform: rotateY(90deg) translateZ(130px);
+	transform: rotateY(90deg) translateZ(130px);
+	border: 1px solid #B8B5B5;
+	font-size: 0.75em;
+}
+
+/*************************************
+Shadow beneath the 3D object
+**************************************/
+
+ .group-view::after {
+	content: '';
+	width: 260px;
+	height: 260px;
+	position: absolute;
+	bottom: 0;
+	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+	-webkit-transform-origin: 100% 100%;
+	-moz-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+	-webkit-transform: rotateX(90deg) translateY(130px);
+	-moz-transform: rotateX(90deg) translateY(130px);
+	transform: rotateX(90deg) translateY(130px);
+	-webkit-transition: box-shadow 350ms;
+	-moz-transition: box-shadow 350ms;
+	transition: box-shadow 350ms;
+}
+
+ .group-view:hover::after {
+	box-shadow: 20px -5px 50px rgba(0,0,0,0.3);
+}
+
+/*************************************
+group-view group-information
+**************************************/
+
+.group-info header {
+	color: #FFF;
+	padding: 7px 30px;
+	font-weight: bold;
+	height: 195px;
+	background-size: contain;
+	background-repeat: no-repeat;
+
+}
+
+
+
+
+
+.group-info p {
+	padding: 1.2em 1.4em;
+	margin: 2px 0 0;
+	font-weight: 700;
+	color:darken($general-text-color, 15%);
+	line-height: 1.4em;
+	border-top: 5px solid $darker-background-color;
+}
+
+/*************************************
+Generate "lighting" using box shadows
+**************************************/
+
+.group-view .group-poster,
+.group-view .group-info,
+.group-view .group-info header {
+	-webkit-transition: box-shadow 350ms;
+	-moz-transition: box-shadow 350ms;
+	transition: box-shadow 300ms;
+}
+
+.group-view .group-poster {
+	box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0);
+}
+
+.group-view:hover .group-poster {
+	box-shadow: inset 300px 0px 40px #2F3238cc;
+}
+
+ .group-view .group-info,
+.group-view .group-info header {
+	box-shadow: inset -300px 0px 40px rgba(0,0,0,0.5);
+}
+
+.group-view:hover .group-info,
+ .group-view:hover .group-info header {
+	box-shadow: inset 0px 0px 40px rgba(0,0,0,0);
+}
+
+/*************************************
+group-posters and still images
+**************************************/
+
+.group:nth-child(1) .group-view .group-poster {
+  background-image: url(https://s3.amazonaws.com/ooomf-com-files/Vgu1RUfKT3WN1ZYxSWaR_14672519443_13d8873062_k.jpg);
+}
+
+.group:nth-child(2) .group-poster {
+  background-image: url(https://s3.amazonaws.com/ooomf-com-files/LGhxuAbT5Wop4JYcrMpV_IMG_3808.jpg);
+}
+
+.group:nth-child(3) .group-poster {
+  background-image: url(https://s3.amazonaws.com/ooomf-com-files/bXoAlw8gT66vBo1wcFoO_IMG_9181.jpg);
+}
+
+.group:nth-child(1) .group-info header {
+	background-image: url(https://s3.amazonaws.com/ooomf-com-files/2MwGKhLETRSQoHP9UWE4_IMG_1348-3.jpg);
+}
+
+.group:nth-child(2) .group-info header {
+	background-image: url(https://s3.amazonaws.com/ooomf-com-files/yEWFnFQRqfmY9l9efJ6g_Snap01-web.jpg);
+}
+
+.group:nth-child(3) .group-info header {
+	background-image: url(https://s3.amazonaws.com/ooomf-com-files/5k0CgVoIS2SUJGNZKYos__DSC2198.jpg);
+}
+
+/*************************************
+Fallback
+**************************************/
+// .no-csstransforms3d .group-view .group-poster,
+// .no-csstransforms3d .group-view .group-info {
+// 	position: relative;
+// }
+
+/*************************************
+Media Queries
+**************************************/
+@media screen and (max-width: 60.75em){
+	.group {
+		float: none;
+		margin: 30px auto 60px;
+	}
+}
