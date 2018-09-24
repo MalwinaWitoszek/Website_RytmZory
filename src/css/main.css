@@ -421,6 +421,37 @@ Media Queries
   }
 }
 
+.carousel .carousel-indicators li {
+  width: 0.825rem;
+  height: 0.825rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-inner {
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.carousel-inner .carousel-item {
+  opacity: 0;
+  -webkit-transition-duration: 2.5s;
+          transition-duration: 2.5s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next.carousel-item-left,
+.carousel-inner .carousel-item-prev.carousel-item-right {
+  opacity: 1;
+}
+
+.carousel-inner .carousel-item-left.active,
+.carousel-inner .carousel-item-right.active {
+  opacity: 0;
+}
+
 html,
 body {
   height: 100%;

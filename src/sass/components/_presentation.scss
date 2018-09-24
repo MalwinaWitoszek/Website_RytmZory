@@ -1,0 +1,27 @@
+// three dots
+.carousel .carousel-indicators li {
+  width: 0.825rem;
+  height: 0.825rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+// slides
+.carousel-inner {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  & .carousel-item {
+    opacity: 0;
+    transition-duration: 2.5s;
+    transition-property: opacity;
+  }
+
+  & .carousel-item.active,
+  & .carousel-item-next.carousel-item-left,
+  & .carousel-item-prev.carousel-item-right {
+    opacity: 1;
+  }
+
+  & .carousel-item-left.active,
+  & .carousel-item-right.active {
+    opacity: 0;
+  }
+}
