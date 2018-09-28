@@ -422,15 +422,15 @@ Media Queries
 }
 
 .carousel .carousel-indicators li {
-  width: 0.825rem;
-  height: 0.825rem;
+  width: 0.725rem;
+  height: 0.725rem;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .carousel-inner {
-  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 8px rgba(0, 0, 0, 0.15);
 }
 
 .carousel-inner .carousel-item {
@@ -450,6 +450,128 @@ Media Queries
 .carousel-inner .carousel-item-left.active,
 .carousel-inner .carousel-item-right.active {
   opacity: 0;
+}
+
+.view {
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+
+.view .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+}
+
+.maskColor,
+.maskColor:after {
+  background-color: rgba(158, 157, 157, 0.3);
+}
+
+.wrapper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+#dancers .item {
+  display: block;
+  width: 100%;
+  margin-bottom: 22px;
+  max-width: 100%;
+}
+
+#dancers .item h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#dancers .item h4:first-of-type {
+  margin-bottom: 0;
+}
+
+#dancers .row {
+  margin-bottom: 70px;
+}
+
+#dancers h3,
+#dancers p {
+  margin: 0;
+}
+
+#dancers h3 {
+  color: #d12a2a;
+  text-align: left;
+}
+
+.team-item {
+  overflow: hidden;
+  position: relative;
+  margin-top: 34px;
+  margin-bottom: 16px;
+  -webkit-box-shadow: 0 0 4px 2px #ffffff80;
+          box-shadow: 0 0 4px 2px #ffffff80;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+.team-item:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.team-item img {
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+.team-item:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.team-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+.team-item:hover .team-overlay {
+  opacity: 1;
+}
+
+.dance-class {
+  position: relative;
+  top: 45%;
+  right: 20%;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.dance-class span {
+  display: block;
+  background: #ffffff;
+  border-radius: 50%;
+  color: #191919;
+  width: 50px;
+  height: 35px;
+  line-height: 35px;
+  margin: 15px auto;
 }
 
 html,
@@ -480,6 +602,10 @@ body {
 ::-webkit-scrollbar-thumb {
   cursor: pointer;
   background: #d12a2a;
+}
+
+ul {
+  list-style: none;
 }
 
 a {

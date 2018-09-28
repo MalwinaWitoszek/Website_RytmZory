@@ -8,12 +8,12 @@
       <title>RYTM-Żory</title>
 
       <link rel="stylesheet" href="css/bootstrap.min.css">
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!-- <link rel="stylesheet" href="css/font-awesome.min.css">
-   <link rel="stylesheet" href="css/magnific-popup.css">
-   <link rel="stylesheet" href="css/owl.theme.css">
-   <link rel="stylesheet" href="css/owl.carousel.css"> -->
+   <link rel="stylesheet" href="css/magnific-popup.css"> -->
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
       <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -99,7 +99,7 @@
       <!-- / HOME SECTION -->
 
       <!-- PRESENTATION SECTION -->
-      <section class="lighter-backgrund text-center">
+      <section id="presentation" class="lighter-backgrund text-center">
             <!-- Colorful separation of sections -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                   <polygon points="0,0 100,0 0,100" />
@@ -136,19 +136,17 @@
                                     </ol>
                                     <!-- / Indicators-->
                                     <!-- Slides -->
-                                    <div class="carousel-inner z-depth-1-half" role="listbox">
+                                    <div class="carousel-inner" role="listbox">
                                           <!--First slide-->
                                           <div class="carousel-item active">
                                                 <!--Strong Mask on the slide-->
                                                 <div class="view">
                                                       <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Others/images/84.jpg" alt="First slide">
-                                                      <div class="mask rgba-black-strong"></div>
+                                                      <div class="mask maskColor"></div>
                                                 </div>
                                                 <!-- Slide caption -->
                                                 <div class="carousel-caption">
-
                                                       <h3 class="h3-responsive">Podpis zdjecia1</h3>
-                                                      <p>Dodatkowo1</p>
                                                 </div>
                                           </div>
                                           <!--/ First slide-->
@@ -157,12 +155,11 @@
                                                 <!--Strong Mask on the slide-->
                                                 <div class="view">
                                                       <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Others/images/85.jpg" alt="Second slide">
-                                                      <div class="mask rgba-black-strong"></div>
+                                                      <div class="mask maskColor"></div>
                                                 </div>
                                                 <!-- Slide caption -->
                                                 <div class="carousel-caption">
                                                       <h3 class="h3-responsive">Podpis zdjecia2</h3>
-                                                      <p>Dodatkowo2</p>
                                                 </div>
                                           </div>
                                           <!-- / Second slide -->
@@ -171,7 +168,7 @@
                                                 <!--Strong Mask on the slide-->
                                                 <div class="view">
                                                       <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Others/images/86.jpg" alt="Third slide">
-                                                      <div class="mask rgba-black-strong"></div>
+                                                      <div class="mask maskColor"></div>
                                                 </div>
                                                 <!-- Slide caption -->
                                                 <div class="carousel-caption">
@@ -184,7 +181,7 @@
                                     <!-- / Slides -->
                                     <!-- Controls -->
                                     <a class="carousel-control-prev" href="#aboutUsCarousel" role="button" data-slide="prev">
-                                                <i class="material-icons md-36 " aria-hidden="true">arrow_left</i>
+                                          <i class="material-icons md-36 " aria-hidden="true">arrow_left</i>
                                           <span class="sr-only">Previous</span>
                                     </a>
                                     <a class="carousel-control-next" href="#aboutUsCarousel" role="button" data-slide="next">
@@ -196,21 +193,17 @@
                         </div>
                         <!--/ Info Slideshow Wrapper-->
 
-                        <!--Grid column-->
+                        <!--Info text-->
                         <div class="col-md-6">
-
-
                               <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
                                     maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus
                                     et aut officiis debitis aut rerum.</p>
-
                               <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
                                     maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus
                                     et aut officiis debitis aut rerum.</p>
                               <p>
-
                         </div>
-                        <!--Grid column-->
+                        <!-- / Info text -->
 
                   </div>
                   <!--/ About Us -->
@@ -231,7 +224,7 @@
 
 
       <!--DANCE GROUPS SECTION -->
-      <section class="lighter-backgrund text-center">
+      <section id="groups" class="lighter-backgrund text-center">
             <!-- Colorful separation of sections -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                   <polygon points="0,0 100,0 0,100" />
@@ -352,6 +345,397 @@
       </section>
       <!--DANCE GROUPS SECTION -->
 
+      <!-- DANCERS SECTION -->
+      <section id="dancers" class="lighter-backgrund text-center">
+            <!-- Colorful separation of sections -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <polygon points="0,0 100,0 0,100" />
+            </svg>
+            <!-- / Colorful separation of sections -->
+
+            <div class="container">
+                  <!-- Section title -->
+                  <h2 class="mb-5 font-weight-bold text-right section-title">Tancerze "Rytmu"</h2>
+
+                  <!-- Age category - the youngest-->
+                  <div class="row">
+
+                        <div class="col-md-offset-2 col-md-8 col-sm-12">
+                              <!-- Category title -->
+                              <header class="category-title">
+                                    <h3>NAJMŁODSI Rytmiczni</h3>
+                              </header>
+                        </div>
+
+                        <!-- <div class="clearfix"></div> -->
+
+                        <div id="owl-team" class="owl-carousel owl-theme">
+                              <div class="col-md-4 col-sm-4 item">
+                                    <div class="team-item">
+                                          <img src="img/tancerze.png" class="img-responsive" alt="">
+                                          <div class="team-overlay">
+                                                <ul class="dance-class">
+                                                      <li>
+                                                            kategoria wiekowa:
+                                                            <span> 11-12 </span>
+                                                      </li>
+                                                      <li>
+                                                            klasa taneczna:
+                                                            <span> D </span>
+                                                      </li>
+                                                </ul>
+                                          </div>
+                                    </div>
+                                    <h4>Maksymilian Galwas</h4>
+                                    <p>&</p>
+                                    <h4>Julia Borowska</h4>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4 item">
+                                    <div class="team-item">
+                                          <img src="img/tancerze.png" class="img-responsive" alt="">
+                                          <div class="team-overlay">
+                                                <ul class="dance-class">
+                                                      <li>
+                                                            kategoria wiekowa:
+                                                            <span> 11-12 </span>
+                                                      </li>
+                                                      <li>
+                                                            klasa taneczna:
+                                                            <span> D </span>
+                                                      </li>
+                                                </ul>
+                                          </div>
+                                    </div>
+                                    <h4>Maksymilian Galwas</h4>
+                                    <p>&</p>
+                                    <h4>Julia Borowska</h4>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4 item">
+                                    <div class="team-item">
+                                          <img src="img/tancerze.png" class="img-responsive" alt="">
+                                          <div class="team-overlay">
+                                                <ul class="dance-class">
+                                                      <li>
+                                                            kategoria wiekowa:
+                                                            <span> 11-12 </span>
+                                                      </li>
+                                                      <li>
+                                                            klasa taneczna:
+                                                            <span> D </span>
+                                                      </li>
+                                                </ul>
+                                          </div>
+                                    </div>
+                                    <h4>Maksymilian Galwas</h4>
+                                    <p>&</p>
+                                    <h4>Julia Borowska</h4>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4 item">
+                                    <div class="team-item">
+                                          <img src="img/tancerze.png" class="img-responsive" alt="">
+                                          <div class="team-overlay">
+                                                <ul class="dance-class">
+                                                      <li>
+                                                            kategoria wiekowa:
+                                                            <span> 11-12 </span>
+                                                      </li>
+                                                      <li>
+                                                            klasa taneczna:
+                                                            <span> D </span>
+                                                      </li>
+                                                </ul>
+                                          </div>
+                                    </div>
+                                    <h4>Maksymilian Galwas</h4>
+                                    <p>&</p>
+                                    <h4>Julia Borowska</h4>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4 item">
+                                    <div class="team-item">
+                                          <img src="img/tancerze.png" class="img-responsive" alt="">
+                                          <div class="team-overlay">
+                                                <ul class="dance-class">
+                                                      <li>
+                                                            kategoria wiekowa:
+                                                            <span> 11-12 </span>
+                                                      </li>
+                                                      <li>
+                                                            klasa taneczna:
+                                                            <span> D </span>
+                                                      </li>
+                                                </ul>
+                                          </div>
+                                    </div>
+                                    <h4>Maksymilian Galwas</h4>
+                                    <p>&</p>
+                                    <h4>Julia Borowska</h4>
+                              </div>
+                        </div>
+
+                  </div>
+                  <!-- / Age category - the youngest-->
+
+                  <!-- Age category - young-->
+                  <div class="row">
+
+                        <div class="col-md-offset-2 col-md-8 col-sm-12">
+                              <!-- Category title -->
+                              <header class="category-title">
+                                    <h3>MŁODSI Rytmiczni</h3>
+                              </header>
+                        </div>
+
+                        <!-- <div class="clearfix"></div> -->
+
+                        <div id="owl-team" class="owl-carousel owl-theme">
+                              <div class="col-md-4 col-sm-4 item">
+                                    <div class="team-item">
+                                          <img src="img/tancerze.png" class="img-responsive" alt="">
+                                          <div class="team-overlay">
+                                                <ul class="dance-class">
+                                                      <li>
+                                                            kategoria wiekowa:
+                                                            <span> 11-12 </span>
+                                                      </li>
+                                                      <li>
+                                                            klasa taneczna:
+                                                            <span> D </span>
+                                                      </li>
+                                                </ul>
+                                          </div>
+                                    </div>
+                                    <h4>Maksymilian Galwas</h4>
+                                    <p>&</p>
+                                    <h4>Julia Borowska</h4>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4 item">
+                                    <div class="team-item">
+                                          <img src="img/tancerze.png" class="img-responsive" alt="">
+                                          <div class="team-overlay">
+                                                <ul class="dance-class">
+                                                      <li>
+                                                            kategoria wiekowa:
+                                                            <span> 11-12 </span>
+                                                      </li>
+                                                      <li>
+                                                            klasa taneczna:
+                                                            <span> D </span>
+                                                      </li>
+                                                </ul>
+                                          </div>
+                                    </div>
+                                    <h4>Maksymilian Galwas</h4>
+                                    <p>&</p>
+                                    <h4>Julia Borowska</h4>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4 item">
+                                    <div class="team-item">
+                                          <img src="img/tancerze.png" class="img-responsive" alt="">
+                                          <div class="team-overlay">
+                                                <ul class="dance-class">
+                                                      <li>
+                                                            kategoria wiekowa:
+                                                            <span> 11-12 </span>
+                                                      </li>
+                                                      <li>
+                                                            klasa taneczna:
+                                                            <span> D </span>
+                                                      </li>
+                                                </ul>
+                                          </div>
+                                    </div>
+                                    <h4>Maksymilian Galwas</h4>
+                                    <p>&</p>
+                                    <h4>Julia Borowska</h4>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4 item">
+                                    <div class="team-item">
+                                          <img src="img/tancerze.png" class="img-responsive" alt="">
+                                          <div class="team-overlay">
+                                                <ul class="dance-class">
+                                                      <li>
+                                                            kategoria wiekowa:
+                                                            <span> 11-12 </span>
+                                                      </li>
+                                                      <li>
+                                                            klasa taneczna:
+                                                            <span> D </span>
+                                                      </li>
+                                                </ul>
+                                          </div>
+                                    </div>
+                                    <h4>Maksymilian Galwas</h4>
+                                    <p>&</p>
+                                    <h4>Julia Borowska</h4>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4 item">
+                                    <div class="team-item">
+                                          <img src="img/tancerze.png" class="img-responsive" alt="">
+                                          <div class="team-overlay">
+                                                <ul class="dance-class">
+                                                      <li>
+                                                            kategoria wiekowa:
+                                                            <span> 11-12 </span>
+                                                      </li>
+                                                      <li>
+                                                            klasa taneczna:
+                                                            <span> D </span>
+                                                      </li>
+                                                </ul>
+                                          </div>
+                                    </div>
+                                    <h4>Maksymilian Galwas</h4>
+                                    <p>&</p>
+                                    <h4>Julia Borowska</h4>
+                              </div>
+                        </div>
+
+                  </div>
+                  <!-- / Age category - young-->
+
+                  <!-- Age category - elderly-->
+                  <div class="row">
+
+                        <div class="col-md-offset-2 col-md-8 col-sm-12">
+                              <!-- Category title -->
+                              <header class="category-title">
+                                    <h3>STARSI Rytmiczni</h3>
+                              </header>
+                        </div>
+
+                        <!-- <div class="clearfix"></div> -->
+
+                        <div id="owl-team" class="owl-carousel owl-theme">
+                              <div class="col-md-4 col-sm-4 item">
+                                    <div class="team-item">
+                                          <img src="img/tancerze.png" class="img-responsive" alt="">
+                                          <div class="team-overlay">
+                                                <ul class="dance-class">
+                                                      <li>
+                                                            kategoria wiekowa:
+                                                            <span> 11-12 </span>
+                                                      </li>
+                                                      <li>
+                                                            klasa taneczna:
+                                                            <span> D </span>
+                                                      </li>
+                                                </ul>
+                                          </div>
+                                    </div>
+                                    <h4>Maksymilian Galwas</h4>
+                                    <p>&</p>
+                                    <h4>Julia Borowska</h4>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4 item">
+                                    <div class="team-item">
+                                          <img src="img/tancerze.png" class="img-responsive" alt="">
+                                          <div class="team-overlay">
+                                                <ul class="dance-class">
+                                                      <li>
+                                                            kategoria wiekowa:
+                                                            <span> 11-12 </span>
+                                                      </li>
+                                                      <li>
+                                                            klasa taneczna:
+                                                            <span> D </span>
+                                                      </li>
+                                                </ul>
+                                          </div>
+                                    </div>
+                                    <h4>Maksymilian Galwas</h4>
+                                    <p>&</p>
+                                    <h4>Julia Borowska</h4>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4 item">
+                                    <div class="team-item">
+                                          <img src="img/tancerze.png" class="img-responsive" alt="">
+                                          <div class="team-overlay">
+                                                <ul class="dance-class">
+                                                      <li>
+                                                            kategoria wiekowa:
+                                                            <span> 11-12 </span>
+                                                      </li>
+                                                      <li>
+                                                            klasa taneczna:
+                                                            <span> D </span>
+                                                      </li>
+                                                </ul>
+                                          </div>
+                                    </div>
+                                    <h4>Maksymilian Galwas</h4>
+                                    <p>&</p>
+                                    <h4>Julia Borowska</h4>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4 item">
+                                    <div class="team-item">
+                                          <img src="img/tancerze.png" class="img-responsive" alt="">
+                                          <div class="team-overlay">
+                                                <ul class="dance-class">
+                                                      <li>
+                                                            kategoria wiekowa:
+                                                            <span> 11-12 </span>
+                                                      </li>
+                                                      <li>
+                                                            klasa taneczna:
+                                                            <span> D </span>
+                                                      </li>
+                                                </ul>
+                                          </div>
+                                    </div>
+                                    <h4>Maksymilian Galwas</h4>
+                                    <p>&</p>
+                                    <h4>Julia Borowska</h4>
+                              </div>
+
+                              <div class="col-md-4 col-sm-4 item">
+                                    <div class="team-item">
+                                          <img src="img/tancerze.png" class="img-responsive" alt="">
+                                          <div class="team-overlay">
+                                                <ul class="dance-class">
+                                                      <li>
+                                                            kategoria wiekowa:
+                                                            <span> 11-12 </span>
+                                                      </li>
+                                                      <li>
+                                                            klasa taneczna:
+                                                            <span> D </span>
+                                                      </li>
+                                                </ul>
+                                          </div>
+                                    </div>
+                                    <h4>Maksymilian Galwas</h4>
+                                    <p>&</p>
+                                    <h4>Julia Borowska</h4>
+                              </div>
+                        </div>
+
+                  </div>
+                  <!-- / Age category - elderly-->
+
+
+            </div>
+            <!-- /.container -->
+
+
+
+            <!-- Dark gray separation of sections -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <polygon fill="$lighter-background-color" points="0,100 100,0 100,100" />
+            </svg>
+            <!-- / Dark gray separation of sections -->
+      </section>
+      <!--DANCERS SECTION -->
 
 
 
@@ -362,14 +746,11 @@
       <!-- SCRIPTS -->
       <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.mousewheel.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
       <script src="js/modernizr.custom.js"></script>
+      <script src="js/custom.js"></script>
 
-    <!-- Carousel options -->
-    <script>
-            $('.carousel').carousel({
-                interval: 5000,
-            })
-        </script>
 
 </body>
 

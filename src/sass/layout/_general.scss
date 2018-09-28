@@ -27,7 +27,9 @@ body {
   cursor: pointer;
   background: lighten($navbar-background-color, 20%);
 }
-
+ul{
+  list-style: none;
+}
 a {
   color: $general-text-color;
   transition: 0.5s;
