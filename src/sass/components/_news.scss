@@ -1,0 +1,49 @@
+.facebook-link{
+  text-align: center;
+  padding-right: 50px;
+}
+.facebook-link img{
+  width: 10vw;
+}
+.shaking:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(1px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(2px, 0, 0);
+  }
+}
+.facebook-link + div{
+  transition: .3s linear;
+
+  &:hover{
+    transform: scale(1.02);
+    & h3{
+      color: lighten(#45619d, 20%);
+
+
+    }
+  }
+  & a{
+    text-decoration:none;
+  }
+  & h3{
+    transition: .3s linear;
+  }
+}
