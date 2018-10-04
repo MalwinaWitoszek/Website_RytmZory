@@ -1,54 +1,53 @@
-// .wrapper {
-// 	margin: 0 auto 100px auto;
-// 	max-width: 960px;
+// .clearfix:before,
+// .clearfix:after {
+//     content: " ";
+//     display: table;
 // }
 
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
+// .clearfix:after {
+//     clear: both;
+// }
 
-.clearfix:after {
-    clear: both;
-}
-
-.stage {
-	list-style: none;
-	padding: 0;
-}
-
+// .stage {
+// 	list-style: none;
+// 	padding: 0;
+// }
+	#groups > .container > div {
+		&:nth-child(2), &:nth-child(3){
+			margin: 40px auto;
+		}
+	}
 /*************************************
 Build the group and rotate on hover
 **************************************/
 
 .group {
-	width: 260px;
-	height: 400px;
-	// float: left;
-
-	perspective: 1000px;
+	width: 240px;
+	perspective: 3000px;
 }
-
-
+.group-title h3{
+	color: lighten($navbar-background-color, 20%);
+	text-align: center;
+	margin-bottom: 60px;
+	margin-top: 40px;
+	@media screen and (max-width: 576px) {
+		margin-bottom: 0;
+	}
+}
+// <div class="row justify-content-center text-justify coach">
+//
+// <div class="col-8 col-sm-9 col-md-8 col-lg-6 mb-5 px-4 group">
 .group-view {
-	width: 260px;
-	height: 400px;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
+	width: 240px;
+	height: 450px;
+	margin: 0 auto;
 	transform-style: preserve-3d;
-	-webkit-transform: translateZ(-130px);
-	-moz-transform: translateZ(-130px);
 	transform: translateZ(-130px);
-	-webkit-transition: -webkit-transform 350ms;
-	-moz-transition: -moz-transform 350ms;
 	transition: transform 350ms;
 }
 
 .group-view:hover {
-	-webkit-transform: rotateY(-78deg) translateZ(20px);
-	-moz-transform: rotateY(-78deg) translateZ(20px);
-	transform: rotateY(-75deg) translateZ(20px);
+	transform: rotateY(-75deg);
 }
 
 /*************************************
@@ -58,25 +57,20 @@ Transform and style the two planes
 .group-view .group-poster,
 .group-view .group-info {
 	position: absolute;
-	width: 260px;
-	height: 400px;
+	width: 240px;
+	height: 450px;
 	background-color:$navbar-background-color;
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
 	backface-visibility: hidden;
+
 }
 
 .group-view .group-poster  {
-	-webkit-transform: translateZ(130px);
-	-moz-transform: translateZ(130px);
-	transform: translateZ(130px);
+	transform: translateZ(118px);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 .group-view .group-info {
-	-webkit-transform: rotateY(90deg) translateZ(130px);
-	-moz-transform: rotateY(90deg) translateZ(130px);
 	transform: rotateY(90deg) translateZ(130px);
 	border: 1px solid #B8B5B5;
 	font-size: 0.75em;
@@ -88,19 +82,13 @@ Shadow beneath the 3D object
 
  .group-view::after {
 	content: '';
-	width: 260px;
-	height: 260px;
+	width: 240px;
+	height: 240px;
 	position: absolute;
 	bottom: 0;
 	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
-	-webkit-transform-origin: 100% 100%;
-	-moz-transform-origin: 100% 100%;
 	transform-origin: 100% 100%;
-	-webkit-transform: rotateX(90deg) translateY(130px);
-	-moz-transform: rotateX(90deg) translateY(130px);
-	transform: rotateX(90deg) translateY(130px);
-	-webkit-transition: box-shadow 350ms;
-	-moz-transition: box-shadow 350ms;
+	transform: rotateX(90deg) translateY(110px);
 	transition: box-shadow 350ms;
 }
 
@@ -117,18 +105,13 @@ group-view group-information
 	padding: 7px 30px;
 	font-weight: bold;
 	height: 195px;
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
-
 }
 
-
-
-
-
 .group-info p {
-	padding: 1.2em 1.4em;
-	margin: 2px 0 0;
+	padding: .7em 1.4em;
+	margin: $general-font-size 0 0;
 	font-weight: 700;
 	color:darken($general-text-color, 15%);
 	line-height: 1.4em;
@@ -142,8 +125,6 @@ Generate "lighting" using box shadows
 .group-view .group-poster,
 .group-view .group-info,
 .group-view .group-info header {
-	-webkit-transition: box-shadow 350ms;
-	-moz-transition: box-shadow 350ms;
 	transition: box-shadow 300ms;
 }
 
@@ -152,7 +133,7 @@ Generate "lighting" using box shadows
 }
 
 .group-view:hover .group-poster {
-	box-shadow: inset 300px 0px 40px #2F3238cc;
+	box-shadow: inset 550px 0px 40px #2F3238cc;
 }
 
  .group-view .group-info,
@@ -168,19 +149,23 @@ Generate "lighting" using box shadows
 /*************************************
 group-posters and still images
 **************************************/
+.dancers{
+	& .group:nth-child(1) .group-view .group-poster {
+		background-image: url(../img/youngestDancers2.jpg);
+	}
 
-.group:nth-child(1) .group-view .group-poster {
-  background-image: url(https://s3.amazonaws.com/ooomf-com-files/Vgu1RUfKT3WN1ZYxSWaR_14672519443_13d8873062_k.jpg);
+	& .group:nth-child(2) .group-poster {
+		background-image: url(../img/middleDancers1.png);
+	}
+
+	& .group:nth-child(3) .group-poster {
+		background-image: url(../img/oldestDancers1.png);
+	}
 }
 
-.group:nth-child(2) .group-poster {
-  background-image: url(https://s3.amazonaws.com/ooomf-com-files/LGhxuAbT5Wop4JYcrMpV_IMG_3808.jpg);
+.coach .group .group-poster {
+  background-image: url(../img/coach2.jpg);
 }
-
-.group:nth-child(3) .group-poster {
-  background-image: url(https://s3.amazonaws.com/ooomf-com-files/bXoAlw8gT66vBo1wcFoO_IMG_9181.jpg);
-}
-
 .group:nth-child(1) .group-info header {
 	background-image: url(https://s3.amazonaws.com/ooomf-com-files/2MwGKhLETRSQoHP9UWE4_IMG_1348-3.jpg);
 }
@@ -194,19 +179,143 @@ group-posters and still images
 }
 
 /*************************************
-Fallback
+ Coach
 **************************************/
-// .no-csstransforms3d .group-view .group-poster,
-// .no-csstransforms3d .group-view .group-info {
-// 	position: relative;
+
+.coach{
+
+// & .group {
+// 	width: 240px;
+// 	perspective: 3000px;
 // }
+// & .group-title h3{
+// 	color: lighten($navbar-background-color, 20%);
+// 	text-align: center;
+// 	margin-bottom: 60px;
+// 	margin-top: 40px;
+// }
+// <div class="row justify-content-center text-justify coach">
+//
+// <div class="col-8 col-sm-9 col-md-8 col-lg-6 mb-5 px-4 group">
+& .group-view {
+	width: 350px;
+	height: 550px;
+	// margin: 0 auto;
+	// transform-style: preserve-3d;
+	// transform: translateZ(-130px);
+	// transition: transform 350ms;
+}
+
+// & .group-view:hover {
+// 	transform: rotateY(-75deg);
+// }
+
+/*************************************
+Transform and style the two planes
+**************************************/
+
+// & .group-view .group-poster,
+// & .group-view .group-info {
+// 	// position: absolute;
+// 	width: 350px;
+// 	height: 550px;
+// 	background-color:$navbar-background-color;
+// 	backface-visibility: hidden;
+
+// }
+
+& .group-view .group-poster  {
+	transform: translateZ(175px);
+	width: 350px;
+	height: 550px;
+	// background-size: cover;
+	// background-repeat: no-repeat;
+}
+
+& .group-view .group-info {
+	width: 350px;
+	height: 550px;
+	transform: rotateY(90deg) translateZ(180px);
+	border: 1px solid #B8B5B5;
+	// font-size: 0.75em;
+}
+
+/*************************************
+Shadow beneath the 3D object
+**************************************/
+
+ & .group-view::after {
+	// content: '';
+	width: 350px;
+	height: 350px;
+	// position: absolute;
+	// bottom: 0;
+	// box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+	// transform-origin: 100% 100%;
+	// transform: rotateX(90deg) translateY(180px);
+	// transition: box-shadow 350ms;
+}
+}
+
+
 
 /*************************************
 Media Queries
 **************************************/
-@media screen and (max-width: 60.75em){
-	.group {
-		float: none;
-		margin: 30px auto 60px;
+// @media screen and (max-width: 768px){
+// 	.group {
+// 		margin-left: 100px;
+// 	}
+	// .coach .group-view .group-poster  {
+	// 	transform: translateZ(175px);
+	// }
+	// .coach .group-view .group-info {
+	// 	transform: rotateY(90deg) translateZ(195px);
+	// }
+// }
+@media screen and (max-width: 576px){
+	.coach-box  {
+transform: scale(0.8);
 	}
 }
+@media screen and (max-width: 460px){
+		.coach-box  {
+	transform: scale(0.75);
+		}
+	}
+	@media screen and (max-width: 375px){
+		.coach-box  {
+	transform: scale(0.65);
+		}
+		.coach .group-info h4{
+			font-size: $general-font-size + 8px;
+		}
+		.coach .group-info p{
+			font-size: $general-font-size + 6px;
+		}
+	}
+// 	.coach .group-view .group-info {
+// 		transform: rotateY(90deg) translateZ(195px);
+// 	}
+// }
+// @media screen and (max-width: 490px){
+// 	.group {
+// 		margin-left: 50px;
+// 	}
+// }
+// @media screen and (max-width: 400px){
+// 	.group {
+// 		margin-left: 20px;
+// 	}
+
+// }
+// @media screen and (min-width: 1200px){
+// 	.coach .group-view .group-info {
+// 		transform: rotateY(90deg) translateZ(270px);
+// 	}
+// }
+// @media screen and (min-width: 1200px){
+// 	.coach .group-view .group-poster  {
+// 		transform: translateZ(260px);
+// 	}
+// }

@@ -6,19 +6,18 @@
   padding-top: 10vh;
 }
 
-#home h1 {
-  color: $general-text-color;
-  font-size: 3.5em;
-  line-height: 1.3em;
-  font-family: $home-font-family;
-}
-
 #home p {
   padding: 2*$general-font-size 0;
   color: lighten($navbar-background-color, 20%);
   font-size: 2rem;
   font-weight: $general-font-weight-bold;
   font-family: $home-font-family;
+  @media screen and (max-width: 768px) {
+    font-size: 1.4rem;
+  }
+  @media screen and (max-width: 460px) {
+    font-size: 1.3rem;
+  }
 }
 
 #home .overlay {

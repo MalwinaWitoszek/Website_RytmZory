@@ -1,287 +1,83 @@
-// .contact-container {
-//   @extend .container;
-//   display: grid;
-//   grid-template-columns: repeat(9, 1fr);
-//   grid-template-rows: repeat(9, 1fr);
-//   border: white solid 10px;
-//   min-height: calc(100vh - 10px);
-//   background-color: $gallery-background-color;
-//   position: relative;
+.contact-details > * {
+	margin: 0 0 60px;
+	line-height: 28px;
+	padding: 0;
 
-//   @media (max-width: $media-laptop + 100px) {
-//     grid-template-columns: repeat(6, 1fr);
-//     grid-template-rows: repeat(5, [r] 3fr [r]) 4fr repeat(6, [r] 3fr [r]);
-//   }
-//   @include breakpoints(laptop) {
-//     display: block;
-//     border: none;
-//     padding: 0 !important;
-//     & > div {
-//       width: $general-container-width;
-//       margin: 0 auto;
-//     }
-//   }
+	& h3 {
+		color: #FFFFFF;
+			font-size: $general-font-size + 2px;
+			font-weight: $general-font-weight + 100;
+			margin-bottom: 1.5*$general-font-size;
+			line-height: 1em;
+			text-transform: uppercase;
+	}
+}
 
-//   & > :first-child       ///top banner
-//   {
-//     grid-column: 1 / span 9;
-//     grid-row: 1 / span 2;
-//     width: 100%;
-//     background-image: linear-gradient(
-//       $gallery-background-color,
-//       $general-color 87%,
-//       $gallery-background-color
-//     );
-//     // @include center-children;
-//     padding-top: 2*$contact-top-banner-padding;
-//     & > :first-child, & > :nth-child(2)  //dog and cat img
-//     {
-//       float: left;
-//       margin: 0 5%;
-//       width: 12%;
-//       height: 50%;
-//     }
-//     & > :nth-child(2)    //cat img
-//     {
-//       float: right;
-//     }
-//     & > :last-child    //div with top banner description
-//     {
-//       padding: 0 5%;
-//     }
+#contact-form {
+	& div {
+		margin-bottom: 2px;
+		&#contact-submit{
+			margin-bottom: 8*$general-font-size;
 
+		}
+	}
+	& input,
+	& textarea {
+			border: none;
+			border-radius: 0;
+			box-shadow: none;
+			background: $darker-background-color;
+			color: rgb(255, 255, 255);
+			font-size: 16px;
+			height: auto;
+			padding: 15px;
 
-//     @media (max-width: $media-laptop + 100px) {
-//       grid-column: 1 / span 6;
-//     }
-//     @include breakpoints(laptop) {
-//       padding-top: $contact-top-banner-padding;
-//       padding-bottom: $contact-top-banner-padding;
-//     }
-//   }  // end of top banner
-//   & > :nth-child(2)        //house icon
-//   {
-//     grid-column: 1 / span 3;
-//     grid-row: 3 / span 1;
-//     position: relative;
-//     @media (max-width: $media-laptop) {
-//       display: block;
-//     }
-//     @include breakpoints(laptop) {
-//       padding-top: 0.55 * $contact-icon-dimension;
-//     }
-//   }
-//   & > :nth-child(3)         // address
-//   {
-//     grid-column: 1 / span 3;
-//     grid-row: 4 / span 2;
-//     padding-top: $contact-icon-dimension / 2;
-//     @media (max-width: $media-laptop + 100px) {
-//       grid-row: 4 / span 2;
-//     }
-//   }
-//   & > :nth-child(4)             //phone icon
-//   {
-//     grid-column: 4 / span 3;
-//     grid-row: 3 / span 1;
-//     position: relative;
-//     &::before {
-//       @media (max-width: $media-laptop + 100px) {
-//         display: none;
-//       }
-//     }
-//     @include breakpoints(laptop) {
-//       padding-top: 0.55 * $contact-icon-dimension;
-//     }
-//   }
-//   & > :nth-child(2), & > :nth-child(4)   //separating icons
-//   {
-//     &::before    //separating line icons
-//   {
-//       content: "";
-//       border-right: 6px solid $general-color;
-//       @include v-center; // centering vertically
-//       right: -2px;
-//       height: $contact-icon-dimension + 15%;
-//       z-index: 2;
+	}
 
-//       @include breakpoints(laptop) {
-//         display: none;
-//       }
-//     }
-//   }
-//   & > :nth-child(5)           // telephone number
-//   {
-//     grid-column: 4 / span 3;
-//     grid-row: 4 / span 2;
-//     padding-top: $contact-icon-dimension / 2;
-//     @media (max-width: $media-laptop + 100px) {
-//       grid-row: 4 / span 2;
-//     }
-//   }
-//   & > :nth-child(6)                 //clock icon
-//   {
-//     grid-column: 7 / span 3;
-//     grid-row: 3 / span 1;
-//     @media (max-width: $media-laptop + 100px) {
-//       grid-column: 1 / span 3;
-//       grid-row: 6 / span 1;
-//       padding-top: 0.8 * $contact-icon-dimension;
-//     }
-//     @include breakpoints(laptop) {
-//       padding-top: 0.55 * $contact-icon-dimension;
-//     }
-//   }
-//   & > :nth-child(7)           //opening hours
-//   {
-//     grid-column: 7 / span 3;
-//     grid-row: 4 / span 2;
-//     padding-top: $contact-icon-dimension / 2;
-//     @media (max-width: $media-laptop + 100px) {
-//       grid-column: 1 / span 3;
-//       grid-row: 7 / span 3;
-//     }
+	& textarea {
+		resize: vertical;
+		}
+}
 
-//   }
+.dancing-banner {
+  background: url("../../img/danceAnimation.gif") no-repeat;
+  background-size: cover;
+  background-position: 10% 70%;
+  border-radius: 4px;
+
+  // position: relative;
+
+}
+.invitation {
+  width: auto;
+  min-height: 15vw;
+	position: relative;
+	@media screen and (max-width: 900px) {
+		min-height: 22vw;
+	}
+  & p{
+    // padding-bottom: 40px;
+    font-size: 40px;
+    font-style: italic;
+    font-weight:700;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+		@media screen and (max-width: 670px) {
+			font-size: 30px;
+			bottom: 20px;
+			left: 20px;
+		}
+		@media screen and (max-width: 430px) {
+			font-size: 20px;
+			bottom: 5px;
+			left: 5px;
+		}
+  }
+}
 
 
-//   & > :nth-child(8)                 //facebook
-//   {
-//     grid-column: 4 / span 3;
-//     grid-row: 6 / span 1;
-//     padding-top: $contact-icon-dimension / 2;
-//     img{  //icon
-//       width: 12%;
-//       display: block;
-//       margin: 0 auto;
-//       @include breakpoints(laptop) {
-//         width: 5%;
-//       }
-//       @media (max-width: 650px) {
-//         width: 7%;
-//       }
-//     }
-//     p{  //link
-//       margin-top: 0;
-//       text-transform: uppercase;
-//       text-align: center;
-//       @include breakpoints(laptop) {
-//         padding-top: 20px;
-//       }
-
-//     }
-
-//   }
-
-//   & > :nth-child(9)           //photo of the salon
-//   {
-//     grid-column: 6 / span 4;
-//     grid-row: 7 / span 3;
-//     padding-left: 15px;
-//     img {
-//       width: 90%;
-//       height: calc(100% - 50px);
-//       border: 2px solid $general-color;
-//       @media (max-width: $media-laptop + 100px) {
-//         width: 100%;
-//       }
-//     }
-//     p {
-//       padding-top: 20px;
-//       padding-left: 35px;
-//       @include breakpoints(tablet) {
-//         padding-left: 0;
-//       }
-//     }
-//     @media (max-width: $media-laptop + 100px) {
-//       grid-column: 4 / span 3;
-//       grid-row: 7 / span 3;
-//     }
-//     @include breakpoints(laptop) {
-//       width: $general-container-width - 25%;
-//       padding: .6*$contact-icon-dimension 0;
-//     }
-
-//   }
-//   & > :nth-child(10)           //map
-//   {
-//      grid-column: 1 / span 5;
-//      grid-row: 7 / span 3;
-//      padding-right: 15px;
-//      & > div {
-//        @media (max-width: $media-laptop + 100px) {
-//          width: 100%;
-//        }
-//      }
-//      p {
-//       padding-top: 20px;
-//       @include breakpoints(laptop) {
-//         padding-left: 35px;
-//       }
-//     }
-//      @media (max-width: $media-laptop + 100px) {
-//        grid-column: 1 / span 6;
-//        grid-row: 10 / span 3;
-//        padding-right: 0;
-//      }
-//      @include breakpoints(laptop) {
-//       width: 100% !important;
-//     }
-//    }
-//   & > :nth-child(9),
-//   & > :nth-child(10) {
-//     @include center-one-element(img);
-
-
-//     @include breakpoints(laptop) {
-//       display: block;
-//       margin: 0 auto;
-//     }
-//   }
-//   .center {
-//     @include center-children();
-//     @include breakpoints(laptop) {
-//       display: block;
-//     }
-//   }
-//   .contact-icon > img      //contact big icons
-//   {
-//     width: $contact-icon-dimension;
-//     height: 2*$contact-icon-dimension;
-//     transition: all 0.2s ease-in-out;
-//     &:hover //hover effect on icons
-//   {
-//       transform: scale(1.1);
-//     }
-//     @include breakpoints(desktopXL) {
-//       width: $contact-icon-dimension - 5%;
-//       height: 2*$contact-icon-dimension - 5%;
-//     }
-//     @include breakpoints(laptop) {
-//      display: block;
-//      margin: 0 auto;
-//      width: .4*$contact-icon-dimension;
-//     }
-//   }
-//   .contact-data > p   //contact informations
-//   {
-//     margin: 0 14% auto 14%;
-//     text-align: justify;
-//   }
-// }
-// .pulsation-fb {
-//   animation: pulsation-fb 2s ease-out;
-//   animation-iteration-count: infinite;
-//   opacity: 0.4;
-// }
-// @keyframes pulsation-fb {
-//   0% {
-//       opacity: .1;
-//   }
-//   50% {
-//       opacity: 1;
-//   }
-//   100% {
-//       opacity: .1;
-//   }
-// }
+#response {
+	margin-top: 20px;
+	color: #FFFFFF;
+}

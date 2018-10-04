@@ -1,49 +1,57 @@
-.facebook-link{
+#news .container .container {
+  width: 70%;
+}
+.facebook-link {
   text-align: center;
   padding-right: 50px;
 }
-.facebook-link img{
+.facebook-link img {
   width: 10vw;
+  box-shadow: 0 5px 11px 1px rgb(49, 68, 111),
+    0 2px 7px 4px rgba(69, 97, 157, 0.6);
 }
 .shaking:hover {
-  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
 }
 
 @keyframes shake {
-  10%, 90% {
+  10%,
+  90% {
     transform: translate3d(-1px, 0, 0);
   }
 
-  20%, 80% {
+  20%,
+  80% {
     transform: translate3d(1px, 0, 0);
   }
 
-  30%, 50%, 70% {
+  30%,
+  50%,
+  70% {
     transform: translate3d(-2px, 0, 0);
   }
 
-  40%, 60% {
+  40%,
+  60% {
     transform: translate3d(2px, 0, 0);
   }
 }
-.facebook-link + div{
-  transition: .3s linear;
+.facebook-link + div {
+  transition: 0.3s linear;
 
-  &:hover{
+  &:hover {
     transform: scale(1.02);
-    & h3{
+    & h3 {
       color: lighten(#45619d, 20%);
-
-
     }
   }
-  & a{
-    text-decoration:none;
+  & a {
+    text-decoration: none;
   }
-  & h3{
-    transition: .3s linear;
+  & h3 {
+    transition: 0.3s linear;
   }
 }

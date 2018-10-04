@@ -1,15 +1,51 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Barrio|Capriola|Eagle+Lake|Galindo|Glass+Antiqua|Kavivanar|Mirza:400,600,700|Oregano|Racing+Sans+One|Tenor+Sans&subset=latin-ext");
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 300;
   color: #fff;
 }
 
 h1 {
-  font-size: 40px;
+  color: #ddd;
+  font-size: 3.5em;
+  line-height: 1.5em;
+  font-family: "Tenor Sans", sans-serif;
   font-weight: 200;
-  line-height: 48px;
-  font-family: 'Tenor Sans', sans-serif;
+}
+
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 5.5vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 6.5vw;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  h1 {
+    font-size: 8vw;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  h1 {
+    font-size: 9vw;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 10vw;
+  }
 }
 
 h2 {
@@ -186,19 +222,24 @@ p {
   padding-top: 10vh;
 }
 
-#home h1 {
-  color: #ddd;
-  font-size: 3.5em;
-  line-height: 1.3em;
-  font-family: "Tenor Sans", sans-serif;
-}
-
 #home p {
   padding: 32px 0;
   color: #d12a2a;
   font-size: 2rem;
   font-weight: 700;
   font-family: "Tenor Sans", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  #home p {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  #home p {
+    font-size: 1.3rem;
+  }
 }
 
 #home .overlay {
@@ -228,38 +269,40 @@ p {
   transition: 1s opacity;
 }
 
-.clearfix:before,
-.clearfix:after {
-  content: " ";
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.stage {
-  list-style: none;
-  padding: 0;
+#groups > .container > div:nth-child(2), #groups > .container > div:nth-child(3) {
+  margin: 40px auto;
 }
 
 /*************************************
 Build the group and rotate on hover
 **************************************/
 .group {
-  width: 260px;
-  height: 400px;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
+  width: 240px;
+  -webkit-perspective: 3000px;
+          perspective: 3000px;
+}
+
+.group-title h3 {
+  color: #d12a2a;
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 576px) {
+  .group-title h3 {
+    margin-bottom: 0;
+  }
 }
 
 .group-view {
-  width: 260px;
-  height: 400px;
+  width: 240px;
+  height: 450px;
+  margin: 0 auto;
   -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+          transform-style: preserve-3d;
   -webkit-transform: translateZ(-130px);
-  transform: translateZ(-130px);
+          transform: translateZ(-130px);
   -webkit-transition: -webkit-transform 350ms;
   transition: -webkit-transform 350ms;
   transition: transform 350ms;
@@ -267,8 +310,8 @@ Build the group and rotate on hover
 }
 
 .group-view:hover {
-  -webkit-transform: rotateY(-78deg) translateZ(20px);
-  transform: rotateY(-75deg) translateZ(20px);
+  -webkit-transform: rotateY(-75deg);
+          transform: rotateY(-75deg);
 }
 
 /*************************************
@@ -277,23 +320,23 @@ Transform and style the two planes
 .group-view .group-poster,
 .group-view .group-info {
   position: absolute;
-  width: 260px;
-  height: 400px;
+  width: 240px;
+  height: 450px;
   background-color: #7c1919;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .group-view .group-poster {
-  -webkit-transform: translateZ(130px);
-  transform: translateZ(130px);
+  -webkit-transform: translateZ(118px);
+          transform: translateZ(118px);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .group-view .group-info {
   -webkit-transform: rotateY(90deg) translateZ(130px);
-  transform: rotateY(90deg) translateZ(130px);
+          transform: rotateY(90deg) translateZ(130px);
   border: 1px solid #B8B5B5;
   font-size: 0.75em;
 }
@@ -303,17 +346,16 @@ Shadow beneath the 3D object
 **************************************/
 .group-view::after {
   content: '';
-  width: 260px;
-  height: 260px;
+  width: 240px;
+  height: 240px;
   position: absolute;
   bottom: 0;
   -webkit-box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
   -webkit-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
-  -webkit-transform: rotateX(90deg) translateY(130px);
-  transform: rotateX(90deg) translateY(130px);
-  -webkit-transition: box-shadow 350ms;
+          transform-origin: 100% 100%;
+  -webkit-transform: rotateX(90deg) translateY(110px);
+          transform: rotateX(90deg) translateY(110px);
   -webkit-transition: -webkit-box-shadow 350ms;
   transition: -webkit-box-shadow 350ms;
   transition: box-shadow 350ms;
@@ -333,13 +375,13 @@ group-view group-information
   padding: 7px 30px;
   font-weight: bold;
   height: 195px;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .group-info p {
-  padding: 1.2em 1.4em;
-  margin: 2px 0 0;
+  padding: .7em 1.4em;
+  margin: 16px 0 0;
   font-weight: 700;
   color: #b7b7b7;
   line-height: 1.4em;
@@ -352,7 +394,6 @@ Generate "lighting" using box shadows
 .group-view .group-poster,
 .group-view .group-info,
 .group-view .group-info header {
-  -webkit-transition: box-shadow 350ms;
   -webkit-transition: -webkit-box-shadow 300ms;
   transition: -webkit-box-shadow 300ms;
   transition: box-shadow 300ms;
@@ -365,8 +406,8 @@ Generate "lighting" using box shadows
 }
 
 .group-view:hover .group-poster {
-  -webkit-box-shadow: inset 300px 0px 40px #2F3238cc;
-          box-shadow: inset 300px 0px 40px #2F3238cc;
+  -webkit-box-shadow: inset 550px 0px 40px #2F3238cc;
+          box-shadow: inset 550px 0px 40px #2F3238cc;
 }
 
 .group-view .group-info,
@@ -384,16 +425,20 @@ Generate "lighting" using box shadows
 /*************************************
 group-posters and still images
 **************************************/
-.group:nth-child(1) .group-view .group-poster {
-  background-image: url(https://s3.amazonaws.com/ooomf-com-files/Vgu1RUfKT3WN1ZYxSWaR_14672519443_13d8873062_k.jpg);
+.dancers .group:nth-child(1) .group-view .group-poster {
+  background-image: url(../img/youngestDancers2.jpg);
 }
 
-.group:nth-child(2) .group-poster {
-  background-image: url(https://s3.amazonaws.com/ooomf-com-files/LGhxuAbT5Wop4JYcrMpV_IMG_3808.jpg);
+.dancers .group:nth-child(2) .group-poster {
+  background-image: url(../img/middleDancers1.png);
 }
 
-.group:nth-child(3) .group-poster {
-  background-image: url(https://s3.amazonaws.com/ooomf-com-files/bXoAlw8gT66vBo1wcFoO_IMG_9181.jpg);
+.dancers .group:nth-child(3) .group-poster {
+  background-image: url(../img/oldestDancers1.png);
+}
+
+.coach .group .group-poster {
+  background-image: url(../img/coach2.jpg);
 }
 
 .group:nth-child(1) .group-info header {
@@ -409,15 +454,69 @@ group-posters and still images
 }
 
 /*************************************
-Fallback
+ Coach
 **************************************/
+.coach {
+  /*************************************
+Transform and style the two planes
+**************************************/
+  /*************************************
+Shadow beneath the 3D object
+**************************************/
+}
+
+.coach .group-view {
+  width: 350px;
+  height: 550px;
+}
+
+.coach .group-view .group-poster {
+  -webkit-transform: translateZ(175px);
+          transform: translateZ(175px);
+  width: 350px;
+  height: 550px;
+}
+
+.coach .group-view .group-info {
+  width: 350px;
+  height: 550px;
+  -webkit-transform: rotateY(90deg) translateZ(180px);
+          transform: rotateY(90deg) translateZ(180px);
+  border: 1px solid #B8B5B5;
+}
+
+.coach .group-view::after {
+  width: 350px;
+  height: 350px;
+}
+
 /*************************************
 Media Queries
 **************************************/
-@media screen and (max-width: 60.75em) {
-  .group {
-    float: none;
-    margin: 30px auto 60px;
+@media screen and (max-width: 576px) {
+  .coach-box {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .coach-box {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .coach-box {
+    -webkit-transform: scale(0.65);
+            transform: scale(0.65);
+  }
+  .coach .group-info h4 {
+    font-size: 24px;
+  }
+  .coach .group-info p {
+    font-size: 22px;
   }
 }
 
@@ -574,6 +673,10 @@ Media Queries
   margin: 16px auto;
 }
 
+#news .container .container {
+  width: 70%;
+}
+
 .facebook-link {
   text-align: center;
   padding-right: 50px;
@@ -581,6 +684,8 @@ Media Queries
 
 .facebook-link img {
   width: 10vw;
+  -webkit-box-shadow: 0 5px 11px 1px #31446f, 0 2px 7px 4px rgba(69, 97, 157, 0.6);
+          box-shadow: 0 5px 11px 1px #31446f, 0 2px 7px 4px rgba(69, 97, 157, 0.6);
 }
 
 .shaking:hover {
@@ -595,46 +700,56 @@ Media Queries
 }
 
 @-webkit-keyframes shake {
-  10%, 90% {
+  10%,
+  90% {
     -webkit-transform: translate3d(-1px, 0, 0);
             transform: translate3d(-1px, 0, 0);
   }
-  20%, 80% {
+  20%,
+  80% {
     -webkit-transform: translate3d(1px, 0, 0);
             transform: translate3d(1px, 0, 0);
   }
-  30%, 50%, 70% {
+  30%,
+  50%,
+  70% {
     -webkit-transform: translate3d(-2px, 0, 0);
             transform: translate3d(-2px, 0, 0);
   }
-  40%, 60% {
+  40%,
+  60% {
     -webkit-transform: translate3d(2px, 0, 0);
             transform: translate3d(2px, 0, 0);
   }
 }
 
 @keyframes shake {
-  10%, 90% {
+  10%,
+  90% {
     -webkit-transform: translate3d(-1px, 0, 0);
             transform: translate3d(-1px, 0, 0);
   }
-  20%, 80% {
+  20%,
+  80% {
     -webkit-transform: translate3d(1px, 0, 0);
             transform: translate3d(1px, 0, 0);
   }
-  30%, 50%, 70% {
+  30%,
+  50%,
+  70% {
     -webkit-transform: translate3d(-2px, 0, 0);
             transform: translate3d(-2px, 0, 0);
   }
-  40%, 60% {
+  40%,
+  60% {
     -webkit-transform: translate3d(2px, 0, 0);
             transform: translate3d(2px, 0, 0);
   }
 }
 
 .facebook-link + div {
-  -webkit-transition: .3s linear;
-  transition: .3s linear;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
 }
 
 .facebook-link + div:hover {
@@ -651,8 +766,97 @@ Media Queries
 }
 
 .facebook-link + div h3 {
-  -webkit-transition: .3s linear;
-  transition: .3s linear;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.contact-details > * {
+  margin: 0 0 60px;
+  line-height: 28px;
+  padding: 0;
+}
+
+.contact-details > * h3 {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+#contact-form div {
+  margin-bottom: 2px;
+}
+
+#contact-form div#contact-submit {
+  margin-bottom: 128px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: #26292E;
+  color: white;
+  font-size: 16px;
+  height: auto;
+  padding: 15px;
+}
+
+#contact-form textarea {
+  resize: vertical;
+}
+
+.dancing-banner {
+  background: url("../../img/danceAnimation.gif") no-repeat;
+  background-size: cover;
+  background-position: 10% 70%;
+  border-radius: 4px;
+}
+
+.invitation {
+  width: auto;
+  min-height: 15vw;
+  position: relative;
+}
+
+@media screen and (max-width: 900px) {
+  .invitation {
+    min-height: 22vw;
+  }
+}
+
+.invitation p {
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 700;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+
+@media screen and (max-width: 670px) {
+  .invitation p {
+    font-size: 30px;
+    bottom: 20px;
+    left: 20px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .invitation p {
+    font-size: 20px;
+    bottom: 5px;
+    left: 5px;
+  }
+}
+
+#response {
+  margin-top: 20px;
+  color: #FFFFFF;
 }
 
 html,
@@ -696,12 +900,24 @@ a {
 }
 
 a:hover, a:active, a:focus {
-  color: #000000;
+  color: #d83d3d;
   outline: none;
+  text-decoration: none;
 }
 
-.lighter-backgrund {
+a[href^="tel:"]:before {
+  content: "\260f";
+  margin-right: 0.5em;
+}
+
+a[href^="mailto:"]:before {
+  content: "\2709";
+  margin-right: 0.5em;
+}
+
+.lighter-background {
   background-color: #3d424a;
+  background-image: url("https://www.transparenttextures.com/patterns/navy.png");
 }
 
 .darker-background {
@@ -717,13 +933,37 @@ section {
 }
 
 .negative-top-margin {
-  margin-top: 90px;
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 850px) and (max-width: 1400px) {
+  .negative-top-margin {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  .negative-top-margin {
+    margin-top: 95px;
+  }
 }
 
 svg {
   width: 100vw;
-  height: 180px;
+  height: 80px;
   fill: #26292E;
+}
+
+@media screen and (min-width: 850px) and (max-width: 1400px) {
+  svg {
+    height: 120px;
+  }
+}
+
+@media screen and (min-width: 1401px) {
+  svg {
+    height: 190px;
+  }
 }
 
 svg:first-of-type {

@@ -1,44 +1,67 @@
 // //fonts from Google Fonts
 
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700');
-@import url('https://fonts.googleapis.com/css?family=Barrio|Capriola|Eagle+Lake|Galindo|Glass+Antiqua|Kavivanar|Mirza:400,600,700|Oregano|Racing+Sans+One|Tenor+Sans&subset=latin-ext');
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Barrio|Capriola|Eagle+Lake|Galindo|Glass+Antiqua|Kavivanar|Mirza:400,600,700|Oregano|Racing+Sans+One|Tenor+Sans&subset=latin-ext");
 
-h1,h2,h3,h4,h5,h6 {
-   font-weight: $general-font-weight;
-   color: $header-text-color;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $general-font-weight;
+  color: $header-text-color;
+}
 
- }
+h1 {
+  color: $general-text-color;
+  font-size: 3.5em;
+  line-height: 1.5em;
+  font-family: $home-font-family;
 
- h1 {
-   font-size: 2*$heading-h3-font-size;
-   font-weight: $general-font-weight - 100;
-   line-height: 3*$general-font-size;
-   font-family: 'Tenor Sans', sans-serif;
+  font-weight: $general-font-weight - 100;
+  //  line-height: 3*$general-font-size;
+  //  font-family: 'Tenor Sans', sans-serif;
+  @media screen and (max-width: 1200px) {
+    font-size: 5.5vw;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 6.5vw;
+  }
+  @media screen and (max-width: 630px) {
+    font-size: 8vw;
+  }
+  @media screen and (max-width: 520px) {
+    font-size: 9vw;
+  }
+  @media screen and (max-width: 420px) {
+    font-size: 10vw;
+  }
 
- }
+}
 
- h2 {
-   font-size: 1.5*$heading-h3-font-size;
-   line-height: 2.5*$general-font-size;
-   margin-top: 0;
- }
+h2 {
+  font-size: 1.5 * $heading-h3-font-size;
+  line-height: 2.5 * $general-font-size;
+  margin-top: 0;
+}
 
- h3 {
-   font-size: $heading-h3-font-size;
-   font-weight: $general-font-weight-bold;
-   line-height: 2*$general-font-size;
- }
+h3 {
+  font-size: $heading-h3-font-size;
+  font-weight: $general-font-weight-bold;
+  line-height: 2 * $general-font-size;
+}
 
- h4 {
+h4 {
   //  color: #505050;
-   font-size: $general-font-size + 2px;
-   line-height: 1.75*$general-font-size;
- }
+  font-size: $general-font-size + 2px;
+  line-height: 1.75 * $general-font-size;
+}
 
- p {
+p {
   //  color: #757575;
-   font-size: $general-font-size;
-   font-weight: $general-font-weight;
-   line-height: 1.75*$general-font-size;
-   letter-spacing: 0.5px;
- }
+  font-size: $general-font-size;
+  font-weight: $general-font-weight;
+  line-height: 1.75 * $general-font-size;
+  letter-spacing: 0.5px;
+}
