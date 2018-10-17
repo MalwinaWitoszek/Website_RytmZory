@@ -332,6 +332,8 @@ Transform and style the two planes
           transform: translateZ(118px);
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-box-shadow: 0px 0px 8px 2px #7c1919;
+          box-shadow: 0px 0px 8px 2px #7c1919;
 }
 
 .group-view .group-info {
@@ -398,11 +400,6 @@ Generate "lighting" using box shadows
   transition: -webkit-box-shadow 300ms;
   transition: box-shadow 300ms;
   transition: box-shadow 300ms, -webkit-box-shadow 300ms;
-}
-
-.group-view .group-poster {
-  -webkit-box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0);
-          box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0);
 }
 
 .group-view:hover .group-poster {
@@ -770,6 +767,88 @@ Media Queries
   transition: 0.3s linear;
 }
 
+.gallery-nav {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 28.8px;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+#gallery img {
+  width: 20vw;
+  height: auto;
+  max-width: 150px;
+}
+
+.filter {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.filter li {
+  margin-bottom: 28.8px;
+  padding: 0;
+}
+
+.filter li a:hover {
+  color: #858d9b;
+}
+
+.filter li.active a {
+  color: #d12a2a;
+}
+
+.showcase-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  padding: 0;
+}
+
+.showcase-list .item img {
+  padding-left: 30px;
+  margin-bottom: 25px;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.showcase-list .item img:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.lightcase-icon-close:before {
+  content: '\2718' !important;
+}
+
+.lightcase-icon-prev:before {
+  content: '\2B9C' !important;
+}
+
+.lightcase-icon-next:before {
+  content: '\2B9E' !important;
+}
+
+.lightcase-icon-spin:before {
+  content: '\058D' !important;
+}
+
+.lightcase-icon-pause:before {
+  content: '\23F8' !important;
+}
+
+.lightcase-icon-play:before {
+  content: '\25B6' !important;
+}
+
 .contact-details > * {
   margin: 0 0 60px;
   line-height: 28px;
@@ -859,6 +938,34 @@ Media Queries
   color: #FFFFFF;
 }
 
+input[type=text], input[type=email], textarea {
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin: 2px 0;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #8f8f8f;
+  width: 250px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 8px #e5e8e7;
+          box-shadow: inset 0 0 8px #e5e8e7;
+}
+
+input[type=submit] {
+  border: none;
+  padding: 8px 25px;
+  margin: 2px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  background: #0d7963;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  opacity: 0.9;
+}
+
 html,
 body {
   height: 100%;
@@ -917,7 +1024,7 @@ a[href^="mailto:"]:before {
 
 .lighter-background {
   background-color: #3d424a;
-  background-image: url("https://www.transparenttextures.com/patterns/navy.png");
+  background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
 }
 
 .darker-background {

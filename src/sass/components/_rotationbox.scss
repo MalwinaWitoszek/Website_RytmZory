@@ -68,6 +68,7 @@ Transform and style the two planes
 	transform: translateZ(118px);
 	background-size: cover;
 	background-repeat: no-repeat;
+  box-shadow: 0px 0px 8px 2px $navbar-background-color;
 }
 
 .group-view .group-info {
@@ -126,10 +127,6 @@ Generate "lighting" using box shadows
 .group-view .group-info,
 .group-view .group-info header {
 	transition: box-shadow 300ms;
-}
-
-.group-view .group-poster {
-	box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0);
 }
 
 .group-view:hover .group-poster {
