@@ -1,14 +1,19 @@
 .custom-navbar {
   margin-bottom: 0;
-  background-color: $navbar-background-color;
-  padding: 10px 0;
-
+  // background-color: $navbar-background-color;
+  padding: 2px 0 !important;
+  transition: .2s ease-in-out;
+  background: 0 0;
   @media (min-width: 768px) {
-    background: 0 0;
+    &.top-nav-collapse {
+       padding: 5px 0 !important;
+    }
+  }
+
     &.top-nav-collapse {
       background: $navbar-background-color;
-      padding: 15px 0;
-    }
+      padding: 0 0 !important;
+
   }
 }
 .navbar-brand {
@@ -16,6 +21,9 @@
   color: $navbar-text-color;
   font-weight: normal;
   font-size: 25px;
+  @media screen and (max-width: 576px) {
+    margin-left: 20px;
+  }
 }
 
 .nav li {
@@ -54,8 +62,7 @@
     }
   }
 }
-
-.navbar-toggle {
+.navbar-toggler {
   border: none;
   padding-top: 10px;
   background-color: transparent;
@@ -66,3 +73,14 @@
   }
 
 }
+.navbar-fixed-top {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+@media (max-width: 1000px){
+.navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+}}

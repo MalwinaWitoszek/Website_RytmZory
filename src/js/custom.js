@@ -13,9 +13,9 @@
 
   $(window).scroll(function () {
     if ($(".navbar").offset().top > 50) {
-      $(".navbar-fixed-top").addClass("top-nav-collapse");
+      $(".sticky-top").addClass("top-nav-collapse");
     } else {
-      $(".navbar-fixed-top").removeClass("top-nav-collapse");
+      $(".sticky-top").removeClass("top-nav-collapse");
     }
   });
 
@@ -117,6 +117,12 @@
     // Prevents default submission of the form after clicking on the submit button.
     return false;
   });
+
+// Showing element after scrolling
+ScrollReveal().reveal('.headline');
+
+
+
 
   //   var form = $('.contact__form'),
   //   message = $('.contact__msg'),

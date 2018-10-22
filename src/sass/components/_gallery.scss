@@ -5,11 +5,20 @@
   margin-bottom: 1.8*$general-font-size;
   line-height: 1em;
   text-transform: uppercase;
+  @media (max-width: 768px){
+    display: none;
+  }
+}
+#gallery Li {
+  width: 25vw;
+  height: auto;
+  max-width: 130px;
+
 }
 #gallery img {
-  width: 20vw;
+  width: 100%;
   height: auto;
-  max-width: 150px;
+  // max-width: 130px;
 }
 .filter {
   margin: 0;
@@ -25,16 +34,33 @@
       color: lighten($navbar-background-color, 20%);
     }
   }
+  @media (max-width: 768px){
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .showcase-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 100%;
-  padding: 0;
+  padding-left: 50px ;
+
+  @media (max-width: 1000px){
+    margin-left: 20px;
+  }
+  @media (max-width: 576px){
+    margin-left: 0;
+  padding-left: 0;
+  }
+  & li {
+    margin-left: 40px;
+
+  }
   & .item img {
-    padding-left: 30px;
+
     margin-bottom: 25px;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 8px rgba(0, 0, 0, 0.15);
     transition: all .4s;
     &:hover {
       transform: scale(1.02);

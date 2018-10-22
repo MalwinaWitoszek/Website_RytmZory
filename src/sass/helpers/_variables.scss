@@ -25,7 +25,7 @@ $heading-h3-font-size: $general-font-size + 4px;
 // $nav-font-family: 'Trade Winds', cursive;
 // $nav-font-size: 16px;
 // $nav-change-font-size: 14px;
-
+$back-to-top-font-size: 1.6*$general-font-size;
 
 //Colors
 
@@ -43,13 +43,14 @@ $header-text-color:#fff;
 // $nav-text-color-active: lighten($nav-text-color, 25);
 // $back-to-top-button-background-color: lighten($general-color, 25);
 // $back-to-top-button-text-color: darken($general-color, 35);
-
+$back-to-top-background-color: #e0e0e0;
 
 //dimensions
 // $general-container-width: 85%;
 $svg-polygon-height-xl: 190px;
 $svg-polygon-height-md: 120px;
 $svg-polygon-height: 80px;
+$couple-icon-height: 100px;
 // $section-top-bottom-padding: 6%;
 // $header-base-height: 11vh;
 // $header-change-height: 8%;

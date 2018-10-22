@@ -76,6 +76,12 @@ section{
     margin-top: .5*$svg-polygon-height-xl;
     }
 }
+// .container {
+//   @media screen and (max-width: 576px){
+// 		margin-left: 2rem;
+// 		margin-right: 2rem;
+// 	}
+// }
 svg {
 
   width: 100vw;
@@ -91,6 +97,50 @@ svg {
  svg:first-of-type {
     fill: $navbar-background-color;
    }
+
+
+
+.couple-icon {
+  position: absolute;
+  top: - .5*$couple-icon-height;
+  right: 10vw;
+  height: $couple-icon-height;
+  @media screen and (max-width: 768px) {
+    height: .7*$couple-icon-height;
+    top: - .35*$couple-icon-height;
+}
+}
+
+// back to top button which show after scrolling
+
+#back-to-top {
+  position: fixed;
+  right: 60px;
+  bottom: 50px;
+  padding: 2px 12px;
+  font-size: $back-to-top-font-size;
+  background-color: $back-to-top-background-color;
+  color: $darker-background-color;
+  opacity: 0;
+  transition: all linear 350ms;
+  @media screen and (max-width: 600px) {
+    right: 30px;
+    font-size: .85*$back-to-top-font-size;}
+}
+
+#back-to-top.show {
+  opacity: .5;
+}
+
+#back-to-top.show:hover {
+  font-size: 1.02*$back-to-top-font-size;
+  background-color: $navbar-background-color;
+  color:$general-text-color;
+  opacity: .8;
+  transition: all linear 350ms;
+}
+
+
 // .parallax-section {
 //   background-attachment: fixed !important;
 //   background-size: cover !important;

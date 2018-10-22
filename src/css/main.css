@@ -143,24 +143,33 @@ p {
 
 .custom-navbar {
   margin-bottom: 0;
-  background-color: #7c1919;
-  padding: 10px 0;
+  padding: 2px 0 !important;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  background: 0 0;
 }
 
 @media (min-width: 768px) {
-  .custom-navbar {
-    background: 0 0;
-  }
   .custom-navbar.top-nav-collapse {
-    background: #7c1919;
-    padding: 15px 0;
+    padding: 5px 0 !important;
   }
+}
+
+.custom-navbar.top-nav-collapse {
+  background: #7c1919;
+  padding: 0 0 !important;
 }
 
 .navbar-brand {
   color: #f9f9f9;
   font-weight: normal;
   font-size: 25px;
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-brand {
+    margin-left: 20px;
+  }
 }
 
 .nav li.active > a,
@@ -200,14 +209,28 @@ p {
   transition: width 0.3s ease, background-color 0.3s ease;
 }
 
-.navbar-toggle {
+.navbar-toggler {
   border: none;
   padding-top: 10px;
   background-color: transparent;
 }
 
-.navbar-toggle .icon-bar {
+.navbar-toggler .icon-bar {
   border-color: transparent;
+}
+
+.navbar-fixed-top {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+@media (max-width: 1000px) {
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 #home {
@@ -291,7 +314,7 @@ Build the group and rotate on hover
 
 @media screen and (max-width: 576px) {
   .group-title h3 {
-    margin-bottom: 0;
+    margin-bottom: 30px;
   }
 }
 
@@ -339,7 +362,7 @@ Transform and style the two planes
 .group-view .group-info {
   -webkit-transform: rotateY(90deg) translateZ(130px);
           transform: rotateY(90deg) translateZ(130px);
-  border: 1px solid #B8B5B5;
+  border: 1px solid #b8b5b5;
   font-size: 0.75em;
 }
 
@@ -347,7 +370,7 @@ Transform and style the two planes
 Shadow beneath the 3D object
 **************************************/
 .group-view::after {
-  content: '';
+  content: "";
   width: 240px;
   height: 240px;
   position: absolute;
@@ -373,7 +396,7 @@ Shadow beneath the 3D object
 group-view group-information
 **************************************/
 .group-info header {
-  color: #FFF;
+  color: #fff;
   padding: 7px 30px;
   font-weight: bold;
   height: 195px;
@@ -382,7 +405,7 @@ group-view group-information
 }
 
 .group-info p {
-  padding: .7em 1.4em;
+  padding: 0.7em 1.4em;
   margin: 16px 0 0;
   font-weight: 700;
   color: #b7b7b7;
@@ -403,8 +426,15 @@ Generate "lighting" using box shadows
 }
 
 .group-view:hover .group-poster {
-  -webkit-box-shadow: inset 550px 0px 40px #2F3238cc;
-          box-shadow: inset 550px 0px 40px #2F3238cc;
+  -webkit-box-shadow: inset 550px 0px 40px #2f3238cc;
+          box-shadow: inset 550px 0px 40px #2f3238cc;
+}
+
+@media screen and (max-width: 375px) {
+  .group-view:hover .group-poster {
+    -webkit-box-shadow: inset 750px 0px 40px #2f3238cc;
+            box-shadow: inset 750px 0px 40px #2f3238cc;
+  }
 }
 
 .group-view .group-info,
@@ -467,6 +497,12 @@ Shadow beneath the 3D object
   height: 550px;
 }
 
+@media screen and (max-width: 375px) {
+  .coach .group-view {
+    height: 750px;
+  }
+}
+
 .coach .group-view .group-poster {
   -webkit-transform: translateZ(175px);
           transform: translateZ(175px);
@@ -474,12 +510,24 @@ Shadow beneath the 3D object
   height: 550px;
 }
 
+@media screen and (max-width: 375px) {
+  .coach .group-view .group-poster {
+    height: 750px;
+  }
+}
+
 .coach .group-view .group-info {
   width: 350px;
   height: 550px;
   -webkit-transform: rotateY(90deg) translateZ(180px);
           transform: rotateY(90deg) translateZ(180px);
-  border: 1px solid #B8B5B5;
+  border: 1px solid #b8b5b5;
+}
+
+@media screen and (max-width: 375px) {
+  .coach .group-view .group-info {
+    height: 750px;
+  }
 }
 
 .coach .group-view::after {
@@ -490,30 +538,39 @@ Shadow beneath the 3D object
 /*************************************
 Media Queries
 **************************************/
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 500px) {
   .coach-box {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
   }
 }
 
 @media screen and (max-width: 460px) {
   .coach-box {
-    -webkit-transform: scale(0.75);
-            transform: scale(0.75);
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
   }
 }
 
 @media screen and (max-width: 375px) {
   .coach-box {
-    -webkit-transform: scale(0.65);
-            transform: scale(0.65);
+    -webkit-transform: scale(0.78);
+            transform: scale(0.78);
+    margin-left: -25px;
   }
   .coach .group-info h4 {
     font-size: 24px;
   }
   .coach .group-info p {
     font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .coach-box {
+    -webkit-transform: scale(0.68);
+            transform: scale(0.68);
+    margin-left: -35px;
   }
 }
 
@@ -775,10 +832,21 @@ Media Queries
   text-transform: uppercase;
 }
 
-#gallery img {
-  width: 20vw;
+@media (max-width: 768px) {
+  .gallery-nav {
+    display: none;
+  }
+}
+
+#gallery Li {
+  width: 25vw;
   height: auto;
-  max-width: 150px;
+  max-width: 130px;
+}
+
+#gallery img {
+  width: 100%;
+  height: auto;
 }
 
 .filter {
@@ -800,6 +868,17 @@ Media Queries
   color: #d12a2a;
 }
 
+@media (max-width: 768px) {
+  .filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .showcase-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -810,12 +889,30 @@ Media Queries
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 100%;
-  padding: 0;
+  padding-left: 50px;
+}
+
+@media (max-width: 1000px) {
+  .showcase-list {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .showcase-list {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+.showcase-list li {
+  margin-left: 40px;
 }
 
 .showcase-list .item img {
-  padding-left: 30px;
   margin-bottom: 25px;
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 8px rgba(0, 0, 0, 0.15);
   -webkit-transition: all .4s;
   transition: all .4s;
 }
@@ -1075,6 +1172,53 @@ svg {
 
 svg:first-of-type {
   fill: #7c1919;
+}
+
+.couple-icon {
+  position: absolute;
+  top: -50px;
+  right: 10vw;
+  height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .couple-icon {
+    height: 70px;
+    top: -35px;
+  }
+}
+
+#back-to-top {
+  position: fixed;
+  right: 60px;
+  bottom: 50px;
+  padding: 2px 12px;
+  font-size: 25.6px;
+  background-color: #e0e0e0;
+  color: #26292E;
+  opacity: 0;
+  -webkit-transition: all linear 350ms;
+  transition: all linear 350ms;
+}
+
+@media screen and (max-width: 600px) {
+  #back-to-top {
+    right: 30px;
+    font-size: 21.76px;
+  }
+}
+
+#back-to-top.show {
+  opacity: .5;
+}
+
+#back-to-top.show:hover {
+  font-size: 26.112px;
+  background-color: #7c1919;
+  color: #ddd;
+  opacity: .8;
+  -webkit-transition: all linear 350ms;
+  transition: all linear 350ms;
 }
 
 /*----------------------------*/

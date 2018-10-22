@@ -4,7 +4,7 @@
 // *--------- MIXINS ---------*
 @import "helpers/mixins";
 // *--------- CSS RESET ---------*
-// @import "base/reset";
+@import "base/reset";
 // *--------- TYPOGRAPHY ---------*
 @import "base/typography";
 
@@ -25,15 +25,10 @@
 @import "components/dancers";
 // *--------- NEWS ---------*
 @import "components/news";
-
-// *--------- SLIDESHOW ---------*
-@import "components/slideshow";
 // *--------- GALLERY ---------*
 @import "components/gallery";
 // *--------- CONTACT ---------*
 @import "components/contact";
-// *--------- GOOGLE MAP ---------*
-@import "components/gmap";
 
 
 // ---------------------
@@ -41,8 +36,7 @@
 // ---------------------
 // *--------- GENERAL ---------*
 @import "layout/general";
-// *---------  PARALLAX ---------*
-@import "layout/parallax";
+
 // ---------------------
 //     EXTENDS
 // ---------------------
