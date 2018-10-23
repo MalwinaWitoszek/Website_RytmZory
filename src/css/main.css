@@ -844,7 +844,7 @@ Media Queries
   max-width: 130px;
 }
 
-#gallery img {
+#gallery .container img {
   width: 100%;
   height: auto;
 }
@@ -1181,11 +1181,15 @@ svg:first-of-type {
   height: 100px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .couple-icon {
-    height: 70px;
+    height: 80px;
     top: -35px;
   }
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 #back-to-top {
@@ -1209,14 +1213,14 @@ svg:first-of-type {
 }
 
 #back-to-top.show {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 #back-to-top.show:hover {
   font-size: 26.112px;
   background-color: #7c1919;
   color: #ddd;
-  opacity: .8;
+  opacity: 0.8;
   -webkit-transition: all linear 350ms;
   transition: all linear 350ms;
 }

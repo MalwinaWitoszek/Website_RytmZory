@@ -27,7 +27,7 @@ body {
   cursor: pointer;
   background: lighten($navbar-background-color, 20%);
 }
-ul{
+ul {
   list-style: none;
 }
 a {
@@ -54,27 +54,27 @@ a {
   background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
   // background-image: url("https://www.transparenttextures.com/patterns/navy.png");
 }
-  .darker-background {
+.darker-background {
   background-color: $darker-background-color;
 }
 
 // SPRAWDZIC CZY WYSTEPUJE
 //buttons i preloader w stylach tooplate-style.css
-section{
+section {
   position: relative;
 }
 .section-title {
   padding-top: 22px;
 }
-.negative-top-margin{
-  margin-top: .5*$svg-polygon-height;
+.negative-top-margin {
+  margin-top: 0.5 * $svg-polygon-height;
 
-	@media screen and (min-width: 850px) and (max-width: 1400px) {
-  margin-top: .5*$svg-polygon-height-md;
+  @media screen and (min-width: 850px) and (max-width: 1400px) {
+    margin-top: 0.5 * $svg-polygon-height-md;
   }
   @media screen and (min-width: 1401px) {
-    margin-top: .5*$svg-polygon-height-xl;
-    }
+    margin-top: 0.5 * $svg-polygon-height-xl;
+  }
 }
 // .container {
 //   @media screen and (max-width: 576px){
@@ -83,32 +83,33 @@ section{
 // 	}
 // }
 svg {
-
   width: 100vw;
   height: $svg-polygon-height;
   fill: $darker-background-color;
   // fill: $lighter-background-color;
   @media screen and (min-width: 850px) and (max-width: 1400px) {
     height: $svg-polygon-height-md;
-    }
-    @media screen and (min-width: 1401px) {
-      height: $svg-polygon-height-xl;      }
- }
- svg:first-of-type {
-    fill: $navbar-background-color;
-   }
-
-
+  }
+  @media screen and (min-width: 1401px) {
+    height: $svg-polygon-height-xl;
+  }
+}
+svg:first-of-type {
+  fill: $navbar-background-color;
+}
 
 .couple-icon {
   position: absolute;
-  top: - .5*$couple-icon-height;
+  top: -0.5 * $couple-icon-height;
   right: 10vw;
   height: $couple-icon-height;
-  @media screen and (max-width: 768px) {
-    height: .7*$couple-icon-height;
-    top: - .35*$couple-icon-height;
+  @media screen and (max-width: 600px) {
+    height: 0.8 * $couple-icon-height;
+    top: -0.35 * $couple-icon-height;
+  }
 }
+.hidden {
+  visibility: hidden;
 }
 
 // back to top button which show after scrolling
@@ -125,21 +126,21 @@ svg {
   transition: all linear 350ms;
   @media screen and (max-width: 600px) {
     right: 30px;
-    font-size: .85*$back-to-top-font-size;}
+    font-size: 0.85 * $back-to-top-font-size;
+  }
 }
 
 #back-to-top.show {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 #back-to-top.show:hover {
-  font-size: 1.02*$back-to-top-font-size;
+  font-size: 1.02 * $back-to-top-font-size;
   background-color: $navbar-background-color;
-  color:$general-text-color;
-  opacity: .8;
+  color: $general-text-color;
+  opacity: 0.8;
   transition: all linear 350ms;
 }
-
 
 // .parallax-section {
 //   background-attachment: fixed !important;

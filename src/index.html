@@ -17,6 +17,18 @@
       <link rel="stylesheet" href="css/lightcase.css">
 
       <link rel="stylesheet" href="css/main.css">
+
+      <!-- a library for showing element after scrolling -->
+      <script src="js/scrollreveal.min.js"></script>
+      <script>
+            // create ScrollReveal instance
+            window.sr = ScrollReveal({
+                  reset: true
+            });
+
+
+      </script>
+
 </head>
 
 <body>
@@ -113,7 +125,7 @@
                   <polygon points="0,0 100,0 0,100" />
             </svg>
             <!-- / Colorful separation of sections -->
-            <img class="couple-icon" src="img/coupleIcon1.png" alt="">
+            <img id="proba" class="couple-icon reveal" style="visibility: none " src="img/coupleIcon1.png" alt="">
 
             <div class="container">
                   <!-- Section title -->
@@ -136,7 +148,7 @@
 
                         <!-- Info Slideshow Wrapper -->
                         <div class="col-md-6 mb-4">
-                              <div id="aboutUsCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
+                              <div id="aboutUsCarousel" class="carousel slide carousel-fade reveal-presentation-left" data-ride="carousel" data-pause="false">
                                     <!-- Indicators -->
                                     <ol class="carousel-indicators">
                                           <li data-target="#aboutUsCarousel" data-slide-to="0" class="active"></li>
@@ -203,7 +215,7 @@
                         <!--/ Info Slideshow Wrapper-->
 
                         <!--Info text-->
-                        <div class="col-md-6 pl-md-5">
+                        <div class="col-md-6 pl-md-5 reveal-presentation-right">
                               <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
                                     maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus
                                     et aut officiis debitis aut rerum.</p>
@@ -238,7 +250,7 @@
                   <polygon points="0,0 100,0 0,100" />
             </svg>
             <!-- / Colorful separation of sections -->
-            <img class="couple-icon" src="img/coupleIcon2.png" alt="">
+            <img class="couple-icon reveal" src="img/coupleIcon2.png" alt="">
 
             <div class="container">
                   <!-- Section title -->
@@ -261,7 +273,7 @@
                         <!-- The youngest group -->
                         <div class="col-12 col-md-6 col-lg-4 mb-5 px-4 group">
                               <!-- Title of the group -->
-                              <header class="group-title">
+                              <header class="group-title reveal">
                                     <h3>NAJMŁODSI Rytmiczni</h3>
                               </header>
                               <!-- / Title of the group -->
@@ -288,7 +300,7 @@
                         <!--Young group -->
                         <div class="col-12 col-md-6 col-lg-4 mb-5 px-4 group">
                               <!-- Title of the group -->
-                              <header class="group-title">
+                              <header class="group-title reveal">
                                     <h3>MŁODZI Rytmiczni</h3>
                               </header>
                               <!-- / Title of the group -->
@@ -316,7 +328,7 @@
                         <!--Older group -->
                         <div class="col-12 col-md-6 col-lg-4 mb-5 px-4 group">
                               <!-- Title of the group -->
-                              <header class="group-title">
+                              <header class="group-title reveal">
                                     <h3>STARSI Rytmiczni</h3>
                               </header>
                               <!-- / Title of the group -->
@@ -348,7 +360,7 @@
                         <!-- Informations about coach -->
                         <div class="col-12 col-md-6 col-lg-4 mb-5 px-4 group">
                               <!-- Title -->
-                              <header class="group-title">
+                              <header class="group-title reveal">
                                     <h3>TRENER</h3>
                               </header>
                               <!-- / Title -->
@@ -394,7 +406,7 @@
                   <polygon points="0,0 100,0 0,100" />
             </svg>
             <!-- / Colorful separation of sections -->
-            <img class="couple-icon" src="img/coupleIcon3.png" alt="">
+            <img class="couple-icon reveal" src="img/coupleIcon3.png" alt="">
 
             <div class="container">
                   <!-- Section title -->
@@ -412,7 +424,7 @@
 
                         <!-- <div class="clearfix"></div> -->
 
-                        <div id="owl-team" class="owl-carousel owl-theme">
+                        <div id="owl-team" class="owl-carousel owl-theme reveal">
                               <div class="col-md-4 col-sm-4 item">
                                     <div class="team-item">
                                           <img src="img/tancerze.png" class="img-responsive" alt="">
@@ -534,7 +546,7 @@
 
                         <!-- <div class="clearfix"></div> -->
 
-                        <div id="owl-team" class="owl-carousel owl-theme">
+                        <div id="owl-team" class="owl-carousel owl-theme reveal">
                               <div class="col-md-4 col-sm-4 item">
                                     <div class="team-item">
                                           <img src="img/tancerze.png" class="img-responsive" alt="">
@@ -656,7 +668,7 @@
 
                         <!-- <div class="clearfix"></div> -->
 
-                        <div id="owl-team" class="owl-carousel owl-theme">
+                        <div id="owl-team" class="owl-carousel owl-theme reveal">
                               <div class="col-md-4 col-sm-4 item">
                                     <div class="team-item">
                                           <img src="img/tancerze.png" class="img-responsive" alt="">
@@ -787,7 +799,7 @@
                   <polygon points="0,0 100,0 0,100" />
             </svg>
             <!-- / Colorful separation of sections -->
-            <img class="couple-icon" src="img/coupleIcon4.png" alt="">
+            <img class="couple-icon reveal" src="img/coupleIcon4.png" alt="">
 
             <div class="container">
                   <!-- Section title -->
@@ -805,7 +817,7 @@
                   </div>
                   <!-- / Section description-->
 
-                  <!-- Portfolio Projects -->
+                  <!-- Photos -->
                   <div class="row">
                         <nav class="col-md-2">
                               <!-- <nav id="options" class="gallery-nav"> -->
@@ -831,9 +843,7 @@
 
                         <div class="col-md-10">
                               <section class="row">
-                                    <!-- <section id="projects"> -->
-                                    <ul class="holderfilter showcase-list">
-                                          <!-- <ul id="thumbs" > -->
+                                      <ul class="holderfilter showcase-list">
 
                                           <!-- Item Project and Filter Name -->
                                           <li class="item" data-id="id-1" data-type="test2">
@@ -938,7 +948,7 @@
                               </section>
                         </div>
                   </div>
-                  <!-- End Portfolio Projects -->
+                  <!-- End Photos -->
 
 
             </div>
@@ -959,7 +969,7 @@
                   <polygon points="0,0 100,0 0,100" />
             </svg>
             <!-- / Colorful separation of sections -->
-            <img class="couple-icon" src="img/coupleIcon5.png" alt="">
+            <img class="couple-icon reveal" src="img/coupleIcon5.png" alt="">
 
             <div class="container">
                   <!-- Section title -->
@@ -1011,7 +1021,7 @@
             <!-- Dark gray separation of sections -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                   <polygon fill="$lighter-background-color" points="0,100 100,0 100,100" />
-            </svg> `
+            </svg>
             <!-- / Dark gray separation of sections -->
       </section>
       <!--NEWS SECTION -->
@@ -1023,7 +1033,7 @@
                   <polygon points="0,0 100,0 0,100" />
             </svg>
             <!-- / Colorful separation of sections -->
-            <img class="couple-icon" src="img/coupleIcon6.png" alt="">
+            <img class="couple-icon reveal" src="img/coupleIcon6.png" alt="">
 
 
             <div class="container">
@@ -1164,7 +1174,7 @@
                   <!-- /.container -->
 
                   <!--Invite you to dance banner-->
-                  <div class="row text-justify justify-content-center my-5 dancing-banner">
+                  <div class="row text-justify justify-content-center my-5 dancing-banner reveal">
 
                         <div class="col-12">
                               <div class="invitation">
@@ -1222,8 +1232,7 @@
 
       <!-- back to top button which show after scrolling -->
       <script src="js/scrollbutton.js"></script>
-      <!-- a library for showing element after scrolling -->
-      <script src="js/scrollreveal.min.js"></script>
+
 
       <script src="js/custom.js"></script>
 

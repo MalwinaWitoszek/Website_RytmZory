@@ -118,8 +118,62 @@
     return false;
   });
 
-// Showing element after scrolling
-ScrollReveal().reveal('.headline');
+
+  // scrollReveal -   Showing element after scrolling
+// Custom Settings
+
+  const coupleIcon = {
+    duration: 1500,
+    delay: 20,
+    easing: 'ease-in-out',
+    scale: 0.75,
+}
+const revealPresentation = {
+
+    duration: 1200,
+    delay: 100,
+    distance: '80px',
+    easing: 'ease-in-out',
+    scale: 1.1,
+    useDelay: 'once'
+};
+
+const revealGroupsTitle = {
+    origin: 'left',
+    duration: 1500,
+    delay: 50,
+    distance: '180px',
+    easing: 'ease-in-out',
+    //      scale: 1.1,
+    useDelay: 'once'
+};
+const owlCarousel = {
+  duration: 1500,
+  delay: 300,
+  easing: 'ease-in-out',
+}
+const dancingBanner = {
+  duration: 2500,
+  delay: 300,
+  easing: 'ease-in-out',
+  scale: 1.5
+}
+sr.reveal('.reveal.couple-icon', coupleIcon);
+$('#proba').addClass('hidden');
+sr.reveal('.reveal-presentation-right,.reveal-presentation-left ', revealPresentation);
+sr.reveal('.reveal-presentation-right,', {
+    origin: 'right'
+});
+sr.reveal('.reveal-presentation-left', {
+    origin: 'left'
+});
+sr.reveal('.reveal.group-title', revealGroupsTitle);
+sr.reveal('.reveal.group-title:nth-of-type(2)', {
+    delay: 300
+});
+
+sr.reveal('.reveal.owl-carousel', owlCarousel);
+sr.reveal('.reveal.dancing-banner', dancingBanner);
 
 
 
