@@ -123,10 +123,10 @@
 // Custom Settings
 
   const coupleIcon = {
-    duration: 1500,
+    duration: 1800,
     delay: 20,
     easing: 'ease-in-out',
-    scale: 0.75,
+    scale: 0.1,
 }
 const revealPresentation = {
 
@@ -149,8 +149,30 @@ const revealGroupsTitle = {
 };
 const owlCarousel = {
   duration: 1500,
-  delay: 300,
+  delay: 600,
   easing: 'ease-in-out',
+}
+const revealNav = {
+  origin: 'top',
+  duration: 2500,
+  delay: 10,
+  distance: '180px',
+  easing: 'ease-in-out',
+  //      scale: 1.1,
+  // useDelay: 'once'
+};
+const showcaseList = {
+  duration: 1500,
+  delay: 500,
+  easing: 'ease-in-out',
+  scale: 0.7,
+}
+const facebookLink = {
+  duration: 2000,
+  delay: 220,
+  easing: 'ease',
+  origin: 'left',
+  distance: '180px',
 }
 const dancingBanner = {
   duration: 2500,
@@ -173,9 +195,28 @@ sr.reveal('.reveal.group-title:nth-of-type(2)', {
 });
 
 sr.reveal('.reveal.owl-carousel', owlCarousel);
+sr.reveal('#gallery nav.reveal', revealNav);
+sr.reveal('.showcase-list.reveal', showcaseList);
+sr.reveal('.facebook-link', facebookLink);
 sr.reveal('.reveal.dancing-banner', dancingBanner);
 
 
+
+// back to top button which show after scrolling
+function showScrollButton() {
+  var offset = window.pageYOffset;
+  //reference to the inner height of document in pixels
+  var documentHeight = document.documentElement.clientHeight;
+
+  if (offset > documentHeight - 50) {
+    scrollBtn.classList.add("show");
+  }
+  if (offset < documentHeight - 50) {
+    scrollBtn.classList.remove("show");
+  }
+}
+var scrollBtn = document.querySelector("#back-to-top");
+window.addEventListener("scroll", showScrollButton);
 
 
   //   var form = $('.contact__form'),

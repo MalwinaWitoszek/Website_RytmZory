@@ -17,6 +17,8 @@
       <link rel="stylesheet" href="css/lightcase.css">
 
       <link rel="stylesheet" href="css/main.css">
+      <link rel="icon" href="img/coupleIcon.ico" type="image/x-icon" />
+      <link rel="shortcut icon" href="img/coupleIcon.ico" type="image/x-icon" />
 
       <!-- a library for showing element after scrolling -->
       <script src="js/scrollreveal.min.js"></script>
@@ -25,8 +27,6 @@
             window.sr = ScrollReveal({
                   reset: true
             });
-
-
       </script>
 
 </head>
@@ -78,7 +78,7 @@
             </div>
             <!-- /.container -->
 
-            <a id="back-to-top">&#11181;</a>
+            <a id="back-to-top" href="#home">&#11181;</a>
       </header>
       <!-- / NAVBAR -->
 
@@ -111,7 +111,7 @@
             <!-- /.container -->
 
             <!-- Video -->
-            <video controls="" autoplay="" loop="" muted>
+            <video autoplay loop muted>
                   <source src="video/video.mp4" type="video/mp4"> Your browser does not support the video tag.
             </video>
 
@@ -125,7 +125,7 @@
                   <polygon points="0,0 100,0 0,100" />
             </svg>
             <!-- / Colorful separation of sections -->
-            <img id="proba" class="couple-icon reveal" style="visibility: none " src="img/coupleIcon1.png" alt="">
+            <img id="proba" class="couple-icon reveal" src="img/coupleIcon1.png" alt="">
 
             <div class="container">
                   <!-- Section title -->
@@ -819,7 +819,7 @@
 
                   <!-- Photos -->
                   <div class="row">
-                        <nav class="col-md-2">
+                        <nav class="col-md-2 reveal">
                               <!-- <nav id="options" class="gallery-nav"> -->
                               <!-- Filter -->
                               <ul class="filter">
@@ -843,7 +843,7 @@
 
                         <div class="col-md-10">
                               <section class="row">
-                                      <ul class="holderfilter showcase-list">
+                                    <ul class="holderfilter showcase-list reveal">
 
                                           <!-- Item Project and Filter Name -->
                                           <li class="item" data-id="id-1" data-type="test2">
@@ -1168,42 +1168,52 @@
                               <!-- / Contact details -->
 
                         </div>
-                        <!--/ Contact us -->
-
+                        <!--Contact details-->
                   </div>
-                  <!-- /.container -->
+                  <!--/ Contact us -->
+            </div>
+            <!-- /.container -->
 
-                  <!--Invite you to dance banner-->
-                  <div class="row text-justify justify-content-center my-5 dancing-banner reveal">
+            <!--Invite you to dance banner-->
+            <div class="row text-justify justify-content-center my-5 dancing-banner reveal">
 
-                        <div class="col-12">
-                              <div class="invitation">
-                                    <p>
-                                          Zapraszamy do tanca!
-                                    </p>
-                              </div>
-                              <!--Strong Mask on the slide-->
-                              <div class="mask maskColor"></div>
-
+                  <div class="col-12">
+                        <div class="invitation">
+                              <p>
+                                    Zapraszamy do tanca!
+                              </p>
                         </div>
+                        <!--Strong Mask on the slide-->
+                        <div class="mask maskColor"></div>
 
                   </div>
-                  <!-- / Invite you to dance banner -->
+
+            </div>
+            <!-- / Invite you to dance banner -->
+
+
+
+            <!-- Dark gray separation of sections -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <polygon fill="$lighter-background-color" points="0,100 100,0 100,100" />
+            </svg>
+            <!-- / Dark gray separation of sections -->
+            <footer>
+
+                  <span>
+                        Klub Tanca Towarzyskiego RYTM Żory © 2018
+                  </span>
 
 
 
 
-                  <!-- Dark gray separation of sections -->
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-                        <polygon fill="$lighter-background-color" points="0,100 100,0 100,100" />
-                  </svg>
-                  <!-- / Dark gray separation of sections -->
+
+            </footer>
+
       </section>
       <!--CONTACT SECTION -->
 
-      <footer>
 
-      </footer>
 
       <!-- SCRIPTS -->
       <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
@@ -1229,10 +1239,6 @@
       <!-- <script src="_include/js/jquery.fancybox-media.js"></script> Fancybox for Media -->
       <!-- <script src="_include/js/jquery.tweet.js"></script> Tweet -->
       <!-- <script src="_include/js/plugins.js"></script> Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
-
-      <!-- back to top button which show after scrolling -->
-      <script src="js/scrollbutton.js"></script>
-
 
       <script src="js/custom.js"></script>
 

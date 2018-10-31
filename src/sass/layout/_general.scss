@@ -2,8 +2,11 @@ html,
 body {
   height: 100%;
   width: 100%;
-}
 
+}
+html{
+  scroll-behavior: smooth;
+}
 body {
   // background: $general-background-color;
   font-family: $general-font-family;
@@ -108,9 +111,21 @@ svg:first-of-type {
     top: -0.35 * $couple-icon-height;
   }
 }
-.hidden {
-  visibility: hidden;
+
+footer{
+
+  background-color: $navbar-background-color;
+  font-size: $footer-font-size;
+  text-align: right;
+  padding-top: .2*$footer-font-size;
+  padding-bottom: .2*$footer-font-size;
+  & span {
+    margin-right: 3*$footer-font-size;
+    margin-top: -60px;
+
+  }
 }
+
 
 // back to top button which show after scrolling
 

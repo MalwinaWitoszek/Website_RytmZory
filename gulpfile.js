@@ -1,6 +1,6 @@
 // Jeżeli wyjdzie GULP 4 to zamienić run-sequence na gulp.series !
 // INSTALACJA PLUGINÓW
-// npm install --save-dev gulp gulp-watch browser-sync gulp-sass gulp-autoprefixer gulp-plumber del gulp-useref gulp-if gulp-uglify gulp-imagemin run-sequence
+// npm install --save-dev gulp gulp-watch gulp-gh-pages browser-sync gulp-sass gulp-autoprefixer gulp-plumber del gulp-useref gulp-if gulp-uglify gulp-imagemin run-sequence
 
 //  Variables
 
@@ -17,6 +17,7 @@ var uglify = require("gulp-uglify"); // minifikacja plików js
 var imagemin = require("gulp-imagemin"); // kompresja obrazów
 var runSequence = require("run-sequence"); // kompresja obrazów
 var browserSync = require("browser-sync").create(); // przeładowanie przeglądarki
+var ghPages = require('gulp-gh-pages');         // umieszczenie projektu na github pages
 
 // styleSheets
 
@@ -120,6 +121,37 @@ gulp.task("server-sync", function() {
 
   });
 });
+
+gulp.task('deploy', function () {   // wdrożenie projektu na github pages
+  return gulp.src("dist/**/*")
+    .pipe(ghPages())
+});
+//   co zrobic:
+//   1.npm install gulp-gh-pages --save-dev
+//   2.dodać require('gulp-gh-pages')
+//   3.dodać task deploy(patrz wyzej)
+//   4.gulp build - aby utworzyc dist
+//   4.push the latest changes to your repo to Github:
+//   git add . , git commit ,git push origin MediaStreamError5.
+//   5.make sure you have a gh-pages branch, if you don’t already. (Be careful when using git rm -rf )
+//     git checkout --orphan gh-pages
+//     git rm -rf .
+//     touch README.md
+//     git add README.md
+//     git commit -m "Init gh-pages"
+//     git push --set-upstream origin gh-pages
+//     git checkout master
+//  6. gulp deploy
+
+// in case of Error:
+// TypeError: Cannot read property '0' of null
+// the solution:
+//     Need to upgrade gift within the gulp-gh-pages module:
+//     cd node_modules/gulp-gh-pages/
+//     npm install --save gift@0.10.2
+//     cd ../../
+//     gulp deploy
+
 
 // wykonywanie sekwencji zadań - wywoanie gulp build
 // Jeżeli wyjdzie GULP 4 to zamienić to na gulp.series !

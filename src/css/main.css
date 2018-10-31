@@ -1069,6 +1069,10 @@ body {
   width: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Source Sans Pro", sans-serif;
   overflow-x: hidden;
@@ -1188,8 +1192,17 @@ svg:first-of-type {
   }
 }
 
-.hidden {
-  visibility: hidden;
+footer {
+  background-color: #7c1919;
+  font-size: 14px;
+  text-align: right;
+  padding-top: 2.8px;
+  padding-bottom: 2.8px;
+}
+
+footer span {
+  margin-right: 42px;
+  margin-top: -60px;
 }
 
 #back-to-top {
