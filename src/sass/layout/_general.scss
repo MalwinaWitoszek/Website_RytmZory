@@ -43,6 +43,7 @@ a {
     outline: none;
     text-decoration: none;
   }
+
   &[href^="tel:"]:before {
     content: "\260f";
     margin-right: 0.5em;
@@ -51,7 +52,16 @@ a {
     content: "\2709";
     margin-right: 0.5em;
   }
+
 }
+
+#contact .contact-details li::before {
+  content: "\21E2";
+  margin-right: 0.5em;
+}
+
+
+
 .lighter-background {
   background-color: $lighter-background-color;
   background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");

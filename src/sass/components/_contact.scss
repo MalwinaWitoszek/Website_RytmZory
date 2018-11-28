@@ -1,43 +1,116 @@
-.contact-details > * {
-	margin: 0 0 60px;
-	line-height: 28px;
+.contact-details > h3 {
+	margin: 0 0 30px;
+	line-height: 2 * $general-font-size;
 	padding: 0;
 
+
+}
+.contact-details {
+
 	& h3 {
-		color: #FFFFFF;
-			font-size: $general-font-size + 2px;
-			font-weight: $general-font-weight + 100;
-			margin-bottom: 1.5*$general-font-size;
-			line-height: 1em;
+		font-weight: $general-font-weight-bold;
+		line-height: 2 * $general-font-size;
+		font-size: $general-font-size + 2px;
+		color: #fff;
+		caption-side: top;
+		// text-align: center;
+		margin-bottom: 1.5*$general-font-size;
+		line-height: 1em;
+		padding: 0;
 			text-transform: uppercase;
+			&:not(:first-child){
+				margin-top: 3*$general-font-size;
+			}
+	}
+	& ul {
+		margin-left: 2*$general-font-size;
+		padding: 0;
+		line-height: 1.5 * $general-font-size;
 	}
 }
 
-#contact-form {
-	& div {
-		margin-bottom: 2px;
-		&#contact-submit{
-			margin-bottom: 8*$general-font-size;
+.contact-schedule {
+	table {
+		// font-family: 'Arial';
+		margin: 0 auto;
+		margin-bottom: 2.5*$general-font-size;
+		border-collapse: collapse;
+		border: 1px solid #eee;
+		border-bottom: 2px solid $darker-background-color;
+		box-shadow: 0px 0px 20px rgba(0,0,0,0.10),
+			 0px 10px 20px rgba(0,0,0,0.05),
+			 0px 20px 20px rgba(0,0,0,0.05),
+			 0px 30px 20px rgba(0,0,0,0.05);
 
-		}
+& caption {
+  font-weight: $general-font-weight-bold;
+  line-height: 2 * $general-font-size;
+	font-size: $general-font-size + 2px;
+	color: #fff;
+	caption-side: top;
+	// text-align: center;
+	margin: 0 0 30px;
+	line-height: 28px;
+	padding: 0;
+	text-transform: uppercase;
+}
+& thead {
+	color: $navbar-background-color;
+	text-align: center;
+}
+& tbody {
+
+	& [colspan="3"] {
+		font-weight: $general-font-weight-bold;
+		line-height: 2 * $general-font-size;
+		font-size: $general-font-size + 2px;
+		color: #ca0505;
+		// caption-side: top;
+		text-align: center;
+		background: #fff;
+		opacity: .6;
 	}
-	& input,
-	& textarea {
-			border: none;
-			border-radius: 0;
-			box-shadow: none;
+	& tr:not(.not-hover) {
+		transition: .5s all ease-in-out;
+		&:hover {
+			background: rgba(74, 74, 74, 0.4);
+
+		 td {
+			 color: #fff;
+			//  font-size:
+		 }
+	 }
+ }
+}
+
+		& th, & td {
+			color: rgb(166, 166, 166);
+			border: 1px solid $darker-background-color;
+			padding: 12px 25px;
+			border-collapse: collapse;
+			transition: .3s color ease-in-out;
+			@media screen and (max-width: 420px) {
+				padding: 12px 15px;
+			}
+		}
+		& th {
 			background: $darker-background-color;
-			color: rgb(255, 255, 255);
-			font-size: 16px;
-			height: auto;
-			padding: 15px;
-
-	}
-
-	& textarea {
-		resize: vertical;
+			opacity: .5;
+			color: #fff;
+			text-transform: uppercase;
+			font-size: .8*$general-font-size;
+			&.last {
+				border-right: none;
+			}
 		}
+	}
+	// & .not-hover{
+
+	// }
 }
+
+
+
 
 .dancing-banner {
   background: url("../../img/danceAnimation.gif") no-repeat;

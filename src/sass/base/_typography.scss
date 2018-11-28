@@ -3,6 +3,14 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Barrio|Capriola|Eagle+Lake|Galindo|Glass+Antiqua|Kavivanar|Mirza:400,600,700|Oregano|Racing+Sans+One|Tenor+Sans&subset=latin-ext");
 
+%text-style {
+    //  color: #757575;
+    font-size: $general-font-size;
+    font-weight: $general-font-weight;
+    line-height: 1.7 * $general-font-size;
+    letter-spacing: 0.5px;
+}
+
 h1,
 h2,
 h3,
@@ -59,9 +67,8 @@ h4 {
 }
 
 p {
-  //  color: #757575;
-  font-size: $general-font-size;
-  font-weight: $general-font-weight;
-  line-height: 1.75 * $general-font-size;
-  letter-spacing: 0.5px;
+  @extend %text-style;
+}
+li {
+  @extend %text-style;
 }

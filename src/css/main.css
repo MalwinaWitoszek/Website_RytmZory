@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Barrio|Capriola|Eagle+Lake|Galindo|Glass+Antiqua|Kavivanar|Mirza:400,600,700|Oregano|Racing+Sans+One|Tenor+Sans&subset=latin-ext");
+p, li {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 27.2px;
+  letter-spacing: 0.5px;
+}
+
 h1,
 h2,
 h3,
@@ -63,13 +70,6 @@ h3 {
 h4 {
   font-size: 18px;
   line-height: 28px;
-}
-
-p {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 28px;
-  letter-spacing: 0.5px;
 }
 
 .section-btn {
@@ -866,6 +866,7 @@ Media Queries
 
 .filter li.active a {
   color: #d12a2a;
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {
@@ -946,44 +947,109 @@ Media Queries
   content: '\25B6' !important;
 }
 
-.contact-details > * {
-  margin: 0 0 60px;
-  line-height: 28px;
+.contact-details > h3 {
+  margin: 0 0 30px;
+  line-height: 32px;
   padding: 0;
 }
 
-.contact-details > * h3 {
-  color: #FFFFFF;
+.contact-details h3 {
+  font-weight: 700;
+  line-height: 32px;
   font-size: 18px;
-  font-weight: 400;
+  color: #fff;
+  caption-side: top;
   margin-bottom: 24px;
   line-height: 1em;
+  padding: 0;
   text-transform: uppercase;
 }
 
-#contact-form div {
-  margin-bottom: 2px;
+.contact-details h3:not(:first-child) {
+  margin-top: 48px;
 }
 
-#contact-form div#contact-submit {
-  margin-bottom: 128px;
+.contact-details ul {
+  margin-left: 32px;
+  padding: 0;
+  line-height: 24px;
 }
 
-#contact-form input,
-#contact-form textarea {
-  border: none;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+.contact-schedule table {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  border-collapse: collapse;
+  border: 1px solid #eee;
+  border-bottom: 2px solid #26292E;
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 20px rgba(0, 0, 0, 0.05), 0px 30px 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 20px rgba(0, 0, 0, 0.05), 0px 30px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-schedule table caption {
+  font-weight: 700;
+  line-height: 32px;
+  font-size: 18px;
+  color: #fff;
+  caption-side: top;
+  margin: 0 0 30px;
+  line-height: 28px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.contact-schedule table thead {
+  color: #7c1919;
+  text-align: center;
+}
+
+.contact-schedule table tbody [colspan="3"] {
+  font-weight: 700;
+  line-height: 32px;
+  font-size: 18px;
+  color: #ca0505;
+  text-align: center;
+  background: #fff;
+  opacity: .6;
+}
+
+.contact-schedule table tbody tr:not(.not-hover) {
+  -webkit-transition: .5s all ease-in-out;
+  transition: .5s all ease-in-out;
+}
+
+.contact-schedule table tbody tr:not(.not-hover):hover {
+  background: rgba(74, 74, 74, 0.4);
+}
+
+.contact-schedule table tbody tr:not(.not-hover):hover td {
+  color: #fff;
+}
+
+.contact-schedule table th, .contact-schedule table td {
+  color: #a6a6a6;
+  border: 1px solid #26292E;
+  padding: 12px 25px;
+  border-collapse: collapse;
+  -webkit-transition: .3s color ease-in-out;
+  transition: .3s color ease-in-out;
+}
+
+@media screen and (max-width: 420px) {
+  .contact-schedule table th, .contact-schedule table td {
+    padding: 12px 15px;
+  }
+}
+
+.contact-schedule table th {
   background: #26292E;
-  color: white;
-  font-size: 16px;
-  height: auto;
-  padding: 15px;
+  opacity: .5;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12.8px;
 }
 
-#contact-form textarea {
-  resize: vertical;
+.contact-schedule table th.last {
+  border-right: none;
 }
 
 .dancing-banner {
@@ -1120,6 +1186,11 @@ a[href^="tel:"]:before {
 
 a[href^="mailto:"]:before {
   content: "\2709";
+  margin-right: 0.5em;
+}
+
+#contact .contact-details li::before {
+  content: "\21E2";
   margin-right: 0.5em;
 }
 
