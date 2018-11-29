@@ -24,6 +24,8 @@
     <link rel="icon" href="img/coupleIcon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="img/coupleIcon.ico" type="image/x-icon" />
 
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
     <!-- a library for showing element after scrolling -->
     <script src="js/scrollreveal.min.js"></script>
     <script>
@@ -99,6 +101,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-sm-12 home-text">
+
+
             <h1>
             Centrum Tańca i Ruchu <br />
               'RYTM' Żory
@@ -106,7 +110,7 @@
             <p>Zaprasza!</p>
             <!-- discover more button -->
             <div class="section-btn">
-              <a href="#about" class="smoothScroll">
+              <a href="#presentation" class="smoothScroll">
                 <span data-hover="Dowiedz się więcej!">
                   Dowiedz się więcej!
                 </span>
@@ -140,8 +144,9 @@
       </svg>
       <!-- / Colorful separation of sections -->
       <img
-        id="proba"
-        class="couple-icon reveal"
+
+        id="first-couple-icon"
+        class="couple-icon not-display"
         src="img/coupleIcon1.png"
         alt=""
       />
@@ -1118,13 +1123,13 @@
                   <caption>
                         Rozkład treningow
                   </caption>
-                  <thead>
+                  <!-- <thead>
                         <tr>
                         <th>Dzien</th>
                         <th>Godzina</th>
                         <th>Miejsce</th>
                         </tr>
-                  </thead>
+                  </thead> -->
                   <tbody>
                               <tr class="not-hover">
                                           <td colspan="3">Grupa początkująca<br>5-7 lat</td>
@@ -1260,7 +1265,9 @@
     <!-- CONTACT SECTION -->
 
     <!-- SCRIPTS -->
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+
+
     <script src="js/bootstrap.min.js"></script>
     <!-- <script src="js/jquery.mousewheel.min.js"></script> -->
     <script src="js/owl.carousel.min.js"></script>
@@ -1289,35 +1296,6 @@
 
     <script src="js/custom.js"></script>
 
-    <script>
-      function _(id) {
-        return document.getElementById(id);
-      }
 
-      function submitForm() {
-        _("mybtn").disabled = true;
-        _("status").innerHTML = "please wait ...";
-        var formdata = new FormData();
-        formdata.append("n", _("n").value);
-        formdata.append("e", _("e").value);
-        formdata.append("m", _("m").value);
-        var ajax = new XMLHttpRequest();
-        ajax.open("POST", "contact.php");
-        ajax.onreadystatechange = function() {
-          if (ajax.readyState == 4 && ajax.status == 200) {
-            if (ajax.responseText == "success") {
-              _("my_form").innerHTML =
-                "<h2>Thanks " +
-                _("n").value +
-                ", your message has been sent.</h2>";
-            } else {
-              _("status").innerHTML = ajax.responseText;
-              _("mybtn").disabled = false;
-            }
-          }
-        };
-        ajax.send(formdata);
-      }
-    </script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-(function ($) {
+$(document).ready(function() {
   "use strict";
 
   // PRE LOADER
@@ -14,10 +14,18 @@
   $(window).scroll(function () {
     if ($(".navbar").offset().top > 50) {
       $(".sticky-top").addClass("top-nav-collapse");
+      $("#first-couple-icon").removeClass("not-display");
+      $("#first-couple-icon").addClass("display");
     } else {
       $(".sticky-top").removeClass("top-nav-collapse");
+      $("#first-couple-icon").removeClass("display");
+      $("#first-couple-icon").addClass("not-display");
     }
   });
+
+
+
+
 
   //Carousel
   $(".carousel").carousel({
@@ -119,6 +127,9 @@
   });
 
 
+
+
+
   // scrollReveal -   Showing element after scrolling
 // Custom Settings
 
@@ -167,21 +178,16 @@ const showcaseList = {
   easing: 'ease-in-out',
   scale: 0.7,
 }
-const facebookLink = {
-  duration: 2000,
-  delay: 220,
-  easing: 'ease',
-  origin: 'left',
-  distance: '180px',
-}
+
 const dancingBanner = {
   duration: 2500,
   delay: 300,
   easing: 'ease-in-out',
   scale: 1.5
 }
+
 sr.reveal('.reveal.couple-icon', coupleIcon);
-$('#proba').addClass('hidden');
+
 sr.reveal('.reveal-presentation-right,.reveal-presentation-left ', revealPresentation);
 sr.reveal('.reveal-presentation-right,', {
     origin: 'right'
@@ -197,7 +203,6 @@ sr.reveal('.reveal.group-title:nth-of-type(2)', {
 sr.reveal('.reveal.owl-carousel', owlCarousel);
 sr.reveal('#gallery nav.reveal', revealNav);
 sr.reveal('.showcase-list.reveal', showcaseList);
-sr.reveal('.facebook-link', facebookLink);
 sr.reveal('.reveal.dancing-banner', dancingBanner);
 
 
@@ -385,4 +390,4 @@ window.addEventListener("scroll", showScrollButton);
   //     }
   //     e.preventDefault();
   // });
-})(jQuery);
+});

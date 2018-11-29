@@ -737,7 +737,8 @@ Media Queries
 }
 
 .facebook-link img {
-  width: 10vw;
+  width: 100%;
+  max-width: 100px;
   -webkit-box-shadow: 0 5px 11px 1px #31446f, 0 2px 7px 4px rgba(69, 97, 157, 0.6);
           box-shadow: 0 5px 11px 1px #31446f, 0 2px 7px 4px rgba(69, 97, 157, 0.6);
 }
@@ -822,6 +823,18 @@ Media Queries
 .facebook-link + div h3 {
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
+}
+
+.not-display {
+  -webkit-transition: .4s all ease-in-out;
+  transition: .4s all ease-in-out;
+  opacity: 0;
+}
+
+.display {
+  -webkit-transition: 1s all ease-in-out;
+  transition: 1s all ease-in-out;
+  opacity: 1.3;
 }
 
 .gallery-nav {
@@ -957,7 +970,7 @@ Media Queries
   font-weight: 700;
   line-height: 32px;
   font-size: 18px;
-  color: #fff;
+  color: #d12a2a;
   caption-side: top;
   margin-bottom: 24px;
   line-height: 1em;
@@ -989,7 +1002,7 @@ Media Queries
   font-weight: 700;
   line-height: 32px;
   font-size: 18px;
-  color: #fff;
+  color: #d12a2a;
   caption-side: top;
   margin: 0 0 30px;
   line-height: 28px;
@@ -1006,9 +1019,9 @@ Media Queries
   font-weight: 700;
   line-height: 32px;
   font-size: 18px;
-  color: #ca0505;
+  color: #fff;
   text-align: center;
-  background: #fff;
+  background: #26292E;
   opacity: .6;
 }
 

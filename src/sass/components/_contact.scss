@@ -11,7 +11,7 @@
 		font-weight: $general-font-weight-bold;
 		line-height: 2 * $general-font-size;
 		font-size: $general-font-size + 2px;
-		color: #fff;
+		color: lighten($navbar-background-color, 20%);
 		caption-side: top;
 		// text-align: center;
 		margin-bottom: 1.5*$general-font-size;
@@ -46,7 +46,7 @@
   font-weight: $general-font-weight-bold;
   line-height: 2 * $general-font-size;
 	font-size: $general-font-size + 2px;
-	color: #fff;
+	color: lighten($navbar-background-color, 20%);
 	caption-side: top;
 	// text-align: center;
 	margin: 0 0 30px;
@@ -64,10 +64,10 @@
 		font-weight: $general-font-weight-bold;
 		line-height: 2 * $general-font-size;
 		font-size: $general-font-size + 2px;
-		color: #ca0505;
+		color: #fff;
 		// caption-side: top;
 		text-align: center;
-		background: #fff;
+		background: $darker-background-color;
 		opacity: .6;
 	}
 	& tr:not(.not-hover) {
@@ -94,6 +94,7 @@
 			}
 		}
 		& th {
+
 			background: $darker-background-color;
 			opacity: .5;
 			color: #fff;
