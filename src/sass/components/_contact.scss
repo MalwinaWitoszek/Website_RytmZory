@@ -23,9 +23,18 @@
 			}
 	}
 	& ul {
-		margin-left: 2*$general-font-size;
+		margin-left: 1.5*$general-font-size;
 		padding: 0;
 		line-height: 1.5 * $general-font-size;
+
+
+	}
+	& li {
+		display: flex;
+
+		& *:first-child {
+margin-right: 1rem;
+		}
 	}
 }
 

@@ -72,8 +72,8 @@ gulp.task("scripts", function() {
 //     </head>
 //     <body>
 //         <!-- build:js js/combined.js -->                    tutaj scieżka i nazwa nowego pliku
-//          <script type="text/javascript" src="scripts/one.js"></script>
-//          <script type="text/javascript" src="scripts/two.js"></script>
+//          <script  src="scripts/one.js"></script>
+//          <script  src="scripts/two.js"></script>
 //         <!-- endbuild -->
 //     </body>
 // </html>
@@ -132,7 +132,7 @@ gulp.task('deploy', function () {   // wdrożenie projektu na github pages
 //   3.dodać task deploy(patrz wyzej)
 //   4.gulp build - aby utworzyc dist
 //   4.push the latest changes to your repo to Github:
-//   git add . , git commit ,git push origin MediaStreamError5.
+//   git add . , git commit ,git push origin master.
 //   5.make sure you have a gh-pages branch, if you don’t already. (Be careful when using git rm -rf )
 //     git checkout --orphan gh-pages
 //     git rm -rf .
