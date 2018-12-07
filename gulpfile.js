@@ -106,7 +106,7 @@ gulp.task("clean", function() {
 
 gulp.task("copy", function() {
   return gulp
-    .src(["src/css/**/*.css", "src/img/*"], {
+    .src(["src/css/**/*.css", "src/img/*", "src/js/**/*.js"], {
       base: "src"
     })
     .pipe(gulp.dest("dist/"));
