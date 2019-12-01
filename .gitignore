@@ -1,1 +1,11 @@
-node_modules
+# Dependency directories
+node_modules/
+
+# compiled output
+dist/
+
+# log file
+*.log
+
+#gulp configuration
+gulpfile.js
