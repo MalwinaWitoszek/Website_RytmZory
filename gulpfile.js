@@ -106,7 +106,7 @@ gulp.task('server-sync', function () {     // stworzenie serwera w katalogu src
 
 
 gulp.task('deploy', function () {   // wdrożenie projektu na github pages
-    return gulp.src("dist/**/*")
+    return gulp.src("./dist/**/*")
       .pipe(ghPages())
   });
   //   co zrobic:
